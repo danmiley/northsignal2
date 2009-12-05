@@ -1,0 +1,97 @@
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:17:55) [GET]
+
+ActionController::RoutingError (No route matches "/search" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:18:56) [GET]
+
+ActionController::RoutingError (No route matches "/search" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:19:02) [GET]
+
+ActionController::RoutingError (No route matches "/search.xml" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:20:08) [GET]
+
+ActionController::RoutingError (No route matches "/search.xml" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:20:46) [GET]
+
+ActionController::RoutingError (No route matches "/search.xml" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:20:56) [GET]
+
+ActionController::RoutingError (No route matches "/search" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:21:41) [GET]
+
+ActionController::RoutingError (No route matches "/search" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:21:54) [GET]
+
+ActionController::RoutingError (No route matches "/search" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:24:39) [GET]
+
+ActionController::RoutingError (No route matches "/search" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:26:02) [GET]
+
+ActionController::RoutingError (No route matches "/search" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:26:23) [GET]
+
+ActionController::RoutingError (No route matches "/search/foo/bar" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SearchController#foo (for 127.0.0.1 at 2009-12-05 00:27:35) [GET]
+  Parameters: {"id"=>"bar"}
+
+ActionController::UnknownAction (No action responded to foo. Actions: index and search):
+  
+
+Rendering rescues/layout (not_found)
