@@ -95,3 +95,18 @@ ActionController::UnknownAction (No action responded to foo. Actions: index and 
   
 
 Rendering rescues/layout (not_found)
+
+
+Processing SearchController#index (for 127.0.0.1 at 2009-12-05 00:47:51) [GET]
+  Parameters: {"id"=>"bar"}
+
+ActionView::MissingTemplate (Missing template search/index.erb in view path app/views):
+  
+
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SearchController#index (for 127.0.0.1 at 2009-12-05 00:50:31) [GET]
+  Parameters: {"id"=>"bar"}
+Rendering search/index
+Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/search/index/bar]

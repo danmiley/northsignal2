@@ -291,4 +291,121 @@ bash-3.2$ git commit
 #	test/functional/
 #	test/unit/
 nothing added to commit but untracked files present (use "git add" to track)
-bash-3.2$ 
+bash-3.2$ git add .
+bash-3.2$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   app/controllers/search_controller.rb
+#	new file:   app/helpers/search_helper.rb
+#	new file:   db/development.sqlite3
+#	new file:   generate
+#	new file:   northsignal2.tmproj
+#	new file:   test/functional/search_controller_test.rb
+#	new file:   test/unit/helpers/search_helper_test.rb
+#
+bash-3.2$ git committ
+git: 'committ' is not a git-command. See 'git --help'.
+
+Did you mean one of these?
+	commit
+	commit-tree
+bash-3.2$ git commit
+7[?47h[?1h=[1;22r[m[H[2J[22;1H".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 15L, 532C[>c[2;1H# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       new file:   app/controllers/search_controller.rb
+#       new file:   app/helpers/search_helper.rb
+#       new file:   db/development.sqlite3
+#       new file:   generate
+#       new file:   northsignal2.tmproj
+#       new file:   test/functional/search_controller_test.rb
+#       new file:   test/unit/helpers/search_helper_test.rb
+#
+[1m[34m~                                                                                                                [17;1H~                                                                                                                [18;1H~                                                                                                                [19;1H~                                                                                                                [20;1H~                                                                                                                [21;1H~                                                                                                                [1;1H[m[22;1H[1m-- INSERT --[m[22;13H[K[1;1Hddddiinng  a[1;7H[K[1;7H[1;5H[K[1;5H[1;4H[K[1;4H[1;3H[K[1;3H[1;2H[K[1;2H[1;1H[K[1;1Haaddddiinng  sseeaarrcch  ccoonnttrroolllleerr:[1;25H[K[1;25H[2;21r[2;1H[L[1;22r[22;1H[1m-- INSERT --[2;1H[m[22;1H[K[2;1H[22;1H:wq".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 16L, 557C written
+[?1l>[2J[?47l8[master fdd5225] adding search controller
+ 6 files changed, 378 insertions(+), 0 deletions(-)
+ create mode 100644 app/controllers/search_controller.rb
+ create mode 100644 app/helpers/search_helper.rb
+ create mode 100644 db/development.sqlite3
+ create mode 100644 generate
+ create mode 100644 northsignal2.tmproj
+ create mode 100644 test/functional/search_controller_test.rb
+ create mode 100644 test/unit/helpers/search_helper_test.rb
+bash-3.2$ !?gith?:p
+  git remote add origin git@github.com:danmiley/northsignal2.git
+bash-3.2$ git push github mat[Kstert[K
+fatal: 'github' does not appear to be a git repository
+fatal: The remote end hung up unexpectedly
+bash-3.2$ dirs
+~/src/northsignal2
+bash-3.2$ dirsgit push github master[1P master[1P master[1P master[1P master[1P master[1P mastero masterr masteri masterg masteri mastern master
+Counting objects: 32, done.
+Delta compression using up to 2 threads.
+Compressing objects:   5% (1/20)   Compressing objects:  10% (2/20)   Compressing objects:  15% (3/20)   Compressing objects:  20% (4/20)   Compressing objects:  25% (5/20)   Compressing objects:  30% (6/20)   Compressing objects:  35% (7/20)   Compressing objects:  40% (8/20)   Compressing objects:  45% (9/20)   Compressing objects:  50% (10/20)   Compressing objects:  55% (11/20)   Compressing objects:  60% (12/20)   Compressing objects:  65% (13/20)   Compressing objects:  70% (14/20)   Compressing objects:  75% (15/20)   Compressing objects:  80% (16/20)   Compressing objects:  85% (17/20)   Compressing objects:  90% (18/20)   Compressing objects:  95% (19/20)   Compressing objects: 100% (20/20)   Compressing objects: 100% (20/20), done.
+Writing objects:   4% (1/23)   Writing objects:   8% (2/23)   Writing objects:  13% (3/23)   Writing objects:  17% (4/23)   Writing objects:  21% (5/23)   Writing objects:  26% (6/23)   Writing objects:  30% (7/23)   Writing objects:  34% (8/23)   Writing objects:  39% (9/23)   Writing objects:  43% (10/23)   Writing objects:  47% (11/23)   Writing objects:  52% (12/23)   Writing objects:  56% (13/23)   Writing objects:  60% (14/23)   Writing objects:  65% (15/23)   Writing objects:  69% (16/23)   Writing objects:  73% (17/23)   Writing objects:  78% (18/23)   Writing objects:  82% (19/23)   Writing objects:  86% (20/23)   Writing objects:  91% (21/23)   Writing objects:  95% (22/23)   Writing objects: 100% (23/23)   Writing objects: 100% (23/23), 5.31 KiB, done.
+Total 23 (delta 4), reused 0 (delta 0)
+To git@github.com:danmiley/northsignal2.git
+   33a4b81..fdd5225  master -> master
+bash-3.2$ git push origin master
+Everything up-to-date
+bash-3.2$ git push origin master[C[C[C[C[C[C[C[C[C[Cdirs[Kgit push github master[C[C[C[C[C[C[C[C[C[C  git remote add origin git@github.com:danmiley/northsignal2.git[C[C[C[C[C[C[C[C[C[Cgit commit[Kt[1Pstatus[1Padd .commit[6Pdirsgit logcommit -a "adding index view"
+fatal: Paths with -a does not make sense.
+bash-3.2$ dirs
+~/src/northsignal2
+bash-3.2$ dirsgit commit -a "adding index view"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Ppush origin master[C[C[C[C[C[C[C[C[C[Cdirs[Kgit push github master[C[C[C[C[C[C[C[C[C[C  git remote add origin git@github.com:danmiley/northsignal2.git[C[C[C[C[C[C[C[C[C[Cgit commit[Kt[1Pstatus[1Padd .commit[6Pdirsgit logcommit -a
+7[?47h[?1h=[1;22r[m[H[2J[22;1H".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 15L, 443C[>c[2;1H# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       modified:   app/controllers/search_controller.rb
+#       modified:   generate
+#       modified:   log/development.log
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       app/views/
+[1m[34m~                                                                                                                [17;1H~                                                                                                                [18;1H~                                                                                                                [19;1H~                                                                                                                [20;1H~                                                                                                                [21;1H~                                                                                                                [1;1H[m[22;1H[1m-- INSERT --[m[22;13H[K[1;1Hddddiinng  iinnddeex  vviieew[1;16H[K[1;16H[1;15H[K[1;15H[1;14H[K[1;14H[1;13H[K[1;13H[1;11H[K[1;11H[1;10H[K[1;10H[1;9H[K[1;9H[1;8H[K[1;8H[1;7H[K[1;7H[1;5H[K[1;5H[1;4H[K[1;4H[1;3H[K[1;3H[1;2H[K[1;2H[1;1H[K[1;1H::q[1;2H[K[1;2H[1;1H[K[1;1H[22;1H[K[1;1H[22;1H:q![22;1H[K[22;1H[?1l>[2J[?47l8Aborting commit due to empty commit message.
+bash-3.2$ d[Kgid[Kt status
+# On branch master
+# Changed but not updated:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   app/controllers/search_controller.rb
+#	modified:   generate
+#	modified:   log/development.log
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	app/views/
+no changes added to commit (use "git add" and/or "git commit -a")
+bash-3.2$ j[Kd[Kgit [K[Kt add appv[K/views/search/*
+bash-3.2$ git add app/views/search/*[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[K
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   app/views/search/index.erb
+#
+# Changed but not updated:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   app/controllers/search_controller.rb
+#	modified:   generate
+#	modified:   log/development.log
+#
+bash-3.2$ git statusadd app/views/search/*[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[Kcommit -a[C[C[C[C[C[C[C[C[C[Cdirs[Kgit commit -a "adding index view"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Ppush origin master
+Everything up-to-date
+bash-3.2$ git push origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pstatusadd app/views/search/*[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[Kcommit -a[C[C[C[C[C[C[C[C[C[Cdirs[Kgit commit -a "adding index view"
+fatal: Paths with -a does not make sense.
+bash-3.2$ git commit -a "adding index view"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Ppush origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -a "adding index view"
