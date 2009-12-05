@@ -1,0 +1,294 @@
+Script started on Sat Dec  5 00:23:08 2009
+bash-3.2$ script/generate
+Usage: script/generate generator [options] [args]
+Rails Info:
+    -v, --version                    Show the Rails version number and quit.
+    -h, --help                       Show this help message and quit.
+General Options:
+    -p, --pretend                    Run but do not make any changes.
+    -f, --force                      Overwrite files that already exist.
+    -s, --skip                       Skip files that already exist.
+    -q, --quiet                      Suppress normal output.
+    -t, --backtrace                  Debugging: show backtrace on errors.
+    -c, --svn                        Modify files with subversion. (Note: svn must be in path)
+    -g, --git                        Modify files with git. (Note: git must be in path)
+
+
+Installed Generators
+  Builtin: controller, helper, integration_test, mailer, metal, migration, model, observer, performance_test, plugin, resource, scaffold, session_migration
+
+More are available at http://wiki.rubyonrails.org/rails/pages/AvailableGenerators
+  1. Download, for example, login_generator.zip
+  2. Unzip to directory /Users/dan/.rails/generators/login
+     to use the generator with all your Rails apps
+     or to /Users/dan/src/northsignal2/lib/generators/login
+     to use with this app only.
+  3. Run generate with no arguments for usage information
+       script/generate login
+
+Generator gems are also available:
+  1. gem search -r generator
+  2. gem install login_generator
+  3. script/generate login
+
+bash-3.2$ script/generate search
+Couldn't find 'search' generator
+bash-3.2$ script [Kgenerate\[K[K[K[K[K[K[K[K[K/generate controller search
+      exists  app/controllers/
+      exists  app/helpers/
+      create  app/views/search
+      exists  test/functional/
+      create  test/unit/helpers/
+      create  app/controllers/search_controller.rb
+      create  test/functional/search_controller_test.rb
+      create  app/helpers/search_helper.rb
+      create  test/unit/helpers/search_helper_test.rb
+bash-3.2$ !?git?:p
+  git push origin master
+bash-3.2$   git push origin master
+Everything up-to-date
+bash-3.2$ dirs
+~/src/northsignal2
+bash-3.2$ dirs[K[K[K[Kgit diff
+[?1h=diff --git a/app/controllers/application_controller.rb b/app/controllers/application_controller.rb[m
+index 6635a3f..fc50857 100644[m
+--- a/app/controllers/application_controller.rb[m
++++ b/app/controllers/application_controller.rb[m
+@@ -7,4 +7,12 @@ class ApplicationController < ActionController::Base[m
+ [m
+   # Scrub sensitive parameters from your log[m
+   # filter_parameter_logging :password[m
++  [m
++  [m
++  def search[m
++    "hi there"[m
++    [m
++    render[m
++  end[m
++[m
+ end[m
+diff --git a/log/development.log b/log/development.log[m
+index e69de29..e859e07 100644[m
+--- a/log/development.log[m
++++ b/log/development.log[m
+:[K[K@@ -0,0 +1,97 @@[m
+:[K[K[?1l>bash-3.2$ git[K[K[K!!
+git diff
+[?1h=diff --git a/app/controllers/application_controller.rb b/app/controllers/application_controller.rb[m
+index 6635a3f..fc50857 100644[m
+--- a/app/controllers/application_controller.rb[m
++++ b/app/controllers/application_controller.rb[m
+@@ -7,4 +7,12 @@ class ApplicationController < ActionController::Base[m
+ [m
+   # Scrub sensitive parameters from your log[m
+   # filter_parameter_logging :password[m
++  [m
++  [m
++  def search[m
++    "hi there"[m
++    [m
++    render[m
++  end[m
++[m
+ end[m
+diff --git a/log/development.log b/log/development.log[m
+index e69de29..e859e07 100644[m
+--- a/log/development.log[m
++++ b/log/development.log[m
+:[K[K@@ -0,0 +1,97 @@[m
++[m
++[m
++Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:17:55) [GET][m
++[m
++ActionController::RoutingError (No route matches "/search" with {:method=>:get}):[m
++  [m
++[m
++Rendering rescues/layout (not_found)[m
++[m
++[m
++Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:18:56) [GET][m
++[m
++ActionController::RoutingError (No route matches "/search" with {:method=>:get}):[m
++  [m
++[m
++Rendering rescues/layout (not_found)[m
++[m
++[m
++Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:19:02) [GET][m
++[m
+:[K[K+ActionController::RoutingError (No route matches "/search.xml" with {:method=>:get}):[m
+:[K[K+  [m
+:[K[K+[m
+:[K[K+Rendering rescues/layout (not_found)[m
++[m
++[m
++Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:20:08) [GET][m
++[m
++ActionController::RoutingError (No route matches "/search.xml" with {:method=>:get}):[m
++  [m
++[m
++Rendering rescues/layout (not_found)[m
++[m
++[m
++Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:20:46) [GET][m
++[m
++ActionController::RoutingError (No route matches "/search.xml" with {:method=>:get}):[m
++  [m
++[m
++Rendering rescues/layout (not_found)[m
++[m
++[m
++Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:20:56) [GET][m
++[m
+:[K[K+ActionController::RoutingError (No route matches "/search" with {:method=>:get}):[m
++  [m
++[m
++Rendering rescues/layout (not_found)[m
++[m
++[m
++Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:21:41) [GET][m
++[m
++ActionController::RoutingError (No route matches "/search" with {:method=>:get}):[m
++  [m
++[m
++Rendering rescues/layout (not_found)[m
++[m
++[m
++Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:21:54) [GET][m
++[m
++ActionController::RoutingError (No route matches "/search" with {:method=>:get}):[m
++  [m
++[m
++Rendering rescues/layout (not_found)[m
++[m
+:[K[K+[m
++Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:24:39) [GET][m
++[m
++ActionController::RoutingError (No route matches "/search" with {:method=>:get}):[m
++  [m
++[m
++Rendering rescues/layout (not_found)[m
++[m
++[m
++Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:26:02) [GET][m
++[m
++ActionController::RoutingError (No route matches "/search" with {:method=>:get}):[m
++  [m
++[m
++Rendering rescues/layout (not_found)[m
++[m
++[m
++Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:26:23) [GET][m
++[m
++ActionController::RoutingError (No route matches "/search/foo/bar" with {:method=>:get}):[m
++  [m
+:[K[K[?1l>bash-3.2$ s[Kgit status
+# On branch master
+# Changed but not updated:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   app/controllers/application_controller.rb
+#	modified:   log/development.log
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	app/controllers/search_controller.rb
+#	app/helpers/search_helper.rb
+#	db/development.sqlite3
+#	generate
+#	northsignal2.tmproj
+#	test/functional/
+#	test/unit/
+no changes added to commit (use "git add" and/or "git commit -a")
+bash-3.2$ git commit -a
+7[?47h[?1h=[1;22r[m[H[2J[22;1H".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 20L, 572C[>c[2;1H# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       modified:   app/controllers/application_controller.rb
+#       modified:   log/development.log
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#       app/controllers/search_controller.rb
+#       app/helpers/search_helper.rb
+#       db/development.sqlite3
+#       generate
+#       northsignal2.tmproj
+#       test/functional/
+#       test/unit/
+[1m[34m~                                                                                                                [1;1H[m[22;1H[1m-- INSERT --[m[22;13H[K[1;1Hddddiin[1;4H[K[1;4H[1;3H[K[1;3H[1;2H[K[1;2H[1;1H[K[1;1Haaddddiinng  ddeeffaauullt  sseeaarrcch  ccoonntto[1;27H[K[1;27Htrroolllleer[2;21r[2;1H[L[1;22r[22;1H[1m-- INSERT --[2;1H[m[22;1H[K[2;1H[22;1H:wq".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 21L, 605C written
+[?1l>[2J[?47l8[master 5ae7de2] adding default search controller
+ 2 files changed, 105 insertions(+), 0 deletions(-)
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ git commit -a[C[C[C[C[C[C[C[C[C[C[K
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ git commit -a[3Pstatuscommit -a[C[C[C[C[C[C[C[C[C[C[K
+bash-3.2$ 
+bash-3.2$ fg
+bash: fg: current: no such job
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ 
+bash-3.2$ fggit commit -a
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	app/controllers/search_controller.rb
+#	app/helpers/search_helper.rb
+#	db/development.sqlite3
+#	generate
+#	northsignal2.tmproj
+#	test/functional/
+#	test/unit/
+nothing added to commit but untracked files present (use "git add" to track)
+bash-3.2$ git log
+[?1h=commit 5ae7de2cc02d152ca0618fa6f866b6c7c032dc0d[m
+Author: danmiley <dan.miley@gmail.com>[m
+Date:   Sat Dec 5 00:34:01 2009 -0800[m
+[m
+    adding default search controller[m
+[m
+commit 33a4b818bd63107aec8480bf5f631cad3b5a6590[m
+Author: danmiley <dan.miley@gmail.com>[m
+Date:   Sat Dec 5 00:02:43 2009 -0800[m
+[m
+    first commit[m
+[m
+commit 220b1408dce782e958033c8bab8b9a232c69e9df[m
+Author: Dan Miley <dan.miley@gmail.com>[m
+Date:   Wed Nov 25 10:50:45 2009 -0800[m
+[m
+    first commit[m
+[K[?1l>bash-3.2$ dirs
+~/src/northsignal2
+bash-3.2$ git commit
+# On branch master
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	app/controllers/search_controller.rb
+#	app/helpers/search_helper.rb
+#	db/development.sqlite3
+#	generate
+#	northsignal2.tmproj
+#	test/functional/
+#	test/unit/
+nothing added to commit but untracked files present (use "git add" to track)
+bash-3.2$ 
