@@ -131,3 +131,57 @@ Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 19:45:49)
   Parameters: {"id"=>"foo"}
 Rendering search/index
 Completed in 42ms (View: 39, DB: 0) | 200 OK [http://localhost/search/index/foo.json]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 20:13:47) [GET]
+  Parameters: {"id"=>"foo"}
+Rendering search/index
+Completed in 118ms (View: 112, DB: 0) | 200 OK [http://localhost/search/index/foo.json]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 20:16:43) [GET]
+  Parameters: {"id"=>"foo"}
+Rendering search/index
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/search/index/foo.json]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 20:20:00) [GET]
+  Parameters: {"id"=>"foo", "s"=>"foo"}
+Rendering search/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/search/index/foo.json?s=foo]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 20:20:20) [GET]
+  Parameters: {"id"=>"foo", "s"=>"foo"}
+Rendering search/index
+Completed in 28ms (View: 20, DB: 0) | 200 OK [http://localhost/search/index/foo.json?s=foo]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 20:20:36) [GET]
+  Parameters: {"id"=>"foo", "s"=>"foo"}
+Rendering search/index
+Completed in 24ms (View: 21, DB: 0) | 200 OK [http://localhost/search/index/foo.json?s=foo]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 20:20:49) [GET]
+  Parameters: {"id"=>"foo", "s"=>"foo"}
+Rendering search/index
+Completed in 30ms (View: 24, DB: 0) | 200 OK [http://localhost/search/index/foo.json?s=foo]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 20:37:35) [GET]
+  Parameters: {"id"=>"foo", "s"=>"foo"}
+Rendering search/index
+Completed in 84ms (View: 79, DB: 0) | 200 OK [http://localhost/search/index/foo.json?s=foo]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 20:38:03) [GET]
+  Parameters: {"id"=>"foo", "s"=>"foo"}
+Rendering search/index
+Completed in 19ms (View: 14, DB: 0) | 200 OK [http://localhost/search/index/foo.json?s=foo]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 20:38:32) [GET]
+  Parameters: {"id"=>"foo", "s"=>"foo bara"}
+Rendering search/index
+Completed in 1413ms (View: 2, DB: 0) | 200 OK [http://localhost/search/index/foo.json?s=foo%20bara]

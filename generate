@@ -615,4 +615,60 @@ bash-3.2$ cd[K[Kg[Kgit status
 #	modified:   generate
 #	modified:   log/development.log
 #
-bash-3.2$ git g[Kcheckout
+bash-3.2$ git g[Kcheckout[K[K[K[K[K[K[K[K[K[K[K[Kgit statusls[Kdirsgit checkout app/views/*[C[C[C[C[C[C[C[C[C[C[C[C[C[Chelp[Kstatusadd public/*push heroku masterorigin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pcommit -a [4Pstatuscommit -a 
+7[?47h[?1h=[1;22r[m[H[2J[22;1H".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 13L, 393C[>c[2;1H# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       modified:   app/views/search/index.erb
+#       modified:   generate
+#       modified:   log/development.log
+#       modified:   public/index.html
+#       modified:   public/osd.xml
+#
+[1m[34m~                                                                                                                [15;1H~                                                                                                                [16;1H~                                                                                                                [17;1H~                                                                                                                [18;1H~                                                                                                                [19;1H~                                                                                                                [20;1H~                                                                                                                [21;1H~                                                                                                                [1;1H[m[22;1H[1m-- INSERT --[m[22;13H[K[1;1Hi  aaddddiinng[1;8H[K[1;8H[1;7H[K[1;7H[1;6H[K[1;6H[1;5H[K[1;5H[1;4H[K[1;4H[1;3H[K[1;3H[1;1H[K[1;1Haaddddiinng  oossd  pprreeffeecct[1;18H[K[1;18Hcttc[1;19H[K[1;19H[1;18H[K[1;18H[1;17H[K[1;17Hettcch  lliinne  aannd  oossd  ttuunneeuup[2;21r[2;1H[L[1;22r[22;1H[1m-- INSERT --[2;1H[m:[2;1H[K[2;1Hccaannnneed  ddttaaa [2;11H[K[2;11H[2;10H[K[2;10H[2;9H[K[2;9Hdaatta  r[2;13H[K[2;13H jjssoon  sso  ffaar[3;21r[3;1H[L[1;22r[22;1H[1m-- INSERT --[3;1H[m[22;1H[K[3;1H[22;1H:wq".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 15L, 457C written
+[?1l>[2J[?47l8[master fed836f] adding osd prefetch line and osd tuneup canned data json so far
+ 5 files changed, 132 insertions(+), 12 deletions(-)
+bash-3.2$ git commit -a [4Pstatusls[Kdirsgit checkout app/views/*[C[C[C[C[C[C[C[C[C[C[C[C[C[Chelp[Kstatusadd public/*push heroku masterorigin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pcommit -a push origin master
+Counting objects: 23, done.
+Delta compression using up to 2 threads.
+Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
+Writing objects:   8% (1/12)   Writing objects:  16% (2/12)   Writing objects:  25% (3/12)   Writing objects:  33% (4/12)   Writing objects:  41% (5/12)   Writing objects:  50% (6/12)   Writing objects:  58% (7/12)   Writing objects:  66% (8/12)   Writing objects:  75% (9/12)   Writing objects:  83% (10/12)   Writing objects:  91% (11/12)   Writing objects: 100% (12/12)   Writing objects: 100% (12/12), 2.78 KiB, done.
+Total 12 (delta 8), reused 0 (delta 0)
+To git@github.com:danmiley/northsignal2.git
+   c11f4c2..fed836f  master -> master
+bash-3.2$ git push origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pcommit -a [4Pstatusls[Kdirsgit checkout app/views/*[C[C[C[C[C[C[C[C[C[C[C[C[C[Chelp[Kstatusadd public/*push heroku master
+Counting objects: 23, done.
+Delta compression using up to 2 threads.
+Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
+Writing objects:   8% (1/12)   Writing objects:  16% (2/12)   Writing objects:  25% (3/12)   Writing objects:  33% (4/12)   Writing objects:  41% (5/12)   Writing objects:  50% (6/12)   Writing objects:  58% (7/12)   Writing objects:  66% (8/12)   Writing objects:  75% (9/12)   Writing objects:  83% (10/12)   Writing objects:  91% (11/12)   Writing objects: 100% (12/12)   Writing objects: 100% (12/12), 2.78 KiB, done.
+Total 12 (delta 8), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Rails app detected
+       Compiled slug size is 88K
+-----> Launching......... done
+       http://northsignal2.heroku.com deployed to Heroku
+
+To git@heroku.com:northsignal2.git
+   c11f4c2..fed836f  master -> master
+bash-3.2$ git diff[K[K[K[Kstuat[K[K[Katut[Ks
+# On branch master
+# Changed but not updated:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   app/controllers/search_controller.rb
+#	modified:   app/views/search/index.erb
+#	modified:   generate
+#	modified:   log/development.log
+#	modified:   public/favicon.ico
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	app/views/search/_@first_link.html.erb
+no changes added to commit (use "git add" and/or "git commit -a")
+bash-3.2$ 
