@@ -110,3 +110,18 @@ Processing SearchController#index (for 127.0.0.1 at 2009-12-05 00:50:31) [GET]
   Parameters: {"id"=>"bar"}
 Rendering search/index
 Completed in 8ms (View: 6, DB: 0) | 200 OK [http://localhost/search/index/bar]
+
+
+Processing SearchController#test (for 127.0.0.1 at 2009-12-05 16:00:26) [GET]
+  Parameters: {"id"=>"foo"}
+
+ActionController::UnknownAction (No action responded to test. Actions: index and search):
+  
+
+Rendering rescues/layout (not_found)
+
+
+Processing SearchController#index (for 127.0.0.1 at 2009-12-05 16:00:37) [GET]
+  Parameters: {"id"=>"bar"}
+Rendering search/index
+Completed in 95ms (View: 2, DB: 0) | 200 OK [http://localhost/search/index/bar]

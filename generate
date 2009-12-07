@@ -408,4 +408,100 @@ bash-3.2$ git statusadd app/views/search/*[C[C[C[C[C[C[C[C[C[C
 Everything up-to-date
 bash-3.2$ git push origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pstatusadd app/views/search/*[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[Kcommit -a[C[C[C[C[C[C[C[C[C[Cdirs[Kgit commit -a "adding index view"
 fatal: Paths with -a does not make sense.
-bash-3.2$ git commit -a "adding index view"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Ppush origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -a "adding index view"
+bash-3.2$ git commit -a "adding index view"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Ppush origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -a "adding index view"[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+7[?47h[?1h=[1;22r[m[H[2J[22;1H".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 12L, 383C[>c[2;1H# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       modified:   app/controllers/search_controller.rb
+#       new file:   app/views/search/index.erb
+#       modified:   generate
+#       modified:   log/development.log
+#
+[1m[34m~                                                                                                                [14;1H~                                                                                                                [15;1H~                                                                                                                [16;1H~                                                                                                                [17;1H~                                                                                                                [18;1H~                                                                                                                [19;1H~                                                                                                                [20;1H~                                                                                                                [21;1H~                                                                                                                [1;1H[m[22;1H[K[22;1H: [1;1H[22;1H[1m-- INSERT --[1;1H[maaddddiinng  iinnddeex  vviieew[22;1H[K[1;17H
+[22;1H:wq".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 12L, 400C written
+[?1l>[2J[?47l8[master d03a972] adding index view
+ 4 files changed, 135 insertions(+), 2 deletions(-)
+ create mode 100644 app/views/search/index.erb
+bash-3.2$ git commit -a "adding index view"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Ppush origin master
+Counting objects: 18, done.
+Delta compression using up to 2 threads.
+Compressing objects:  12% (1/8)   Compressing objects:  25% (2/8)   Compressing objects:  37% (3/8)   Compressing objects:  50% (4/8)   Compressing objects:  62% (5/8)   Compressing objects:  75% (6/8)   Compressing objects:  87% (7/8)   Compressing objects: 100% (8/8)   Compressing objects: 100% (8/8), done.
+Writing objects:   9% (1/11)   Writing objects:  18% (2/11)   Writing objects:  27% (3/11)   Writing objects:  36% (4/11)   Writing objects:  45% (5/11)   Writing objects:  54% (6/11)   Writing objects:  63% (7/11)   Writing objects:  72% (8/11)   Writing objects:  81% (9/11)   Writing objects:  90% (10/11)   Writing objects: 100% (11/11)   Writing objects: 100% (11/11), 2.47 KiB, done.
+Total 11 (delta 5), reused 0 (delta 0)
+To git@github.com:danmiley/northsignal2.git
+   fdd5225..d03a972  master -> master
+bash-3.2$ git push origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pcommit -a "adding index view"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Ppush origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pstatusadd app/views/search/*[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[Kadd app/views/search/*[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[Kpush origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -a "adding index view"[Kpush origin master[C[C[C[C[C[C[C[C[C[C[Ksudo gem install heroku
+Password:
+
+Building native extensions.  This could take a while...
+Successfully installed rest-client-1.0.3
+Successfully installed configuration-1.1.0
+Successfully installed launchy-0.3.3
+Successfully installed json-1.2.0
+Successfully installed heroku-1.4
+5 gems installed
+Installing ri documentation for rest-client-1.0.3...
+Installing ri documentation for configuration-1.1.0...
+Installing ri documentation for launchy-0.3.3...
+Installing ri documentation for json-1.2.0...
+Installing ri documentation for heroku-1.4...
+Installing RDoc documentation for rest-client-1.0.3...
+Installing RDoc documentation for configuration-1.1.0...
+Installing RDoc documentation for launchy-0.3.3...
+Installing RDoc documentation for json-1.2.0...
+Installing RDoc documentation for heroku-1.4...
+bash-3.2$ 
+bash-3.2$ r[Kheroku create
+Enter your Heroku credentials.
+Email: dan.miley@gmail.com
+Password: 
+Uploading ssh public key /Users/dan/.ssh/id_rsa.pub
+Created http://gentle-earth-35.heroku.com/ | git@heroku.com:gentle-earth-35.git
+Git remote heroku added
+bash-3.2$ git[K[K[Kdirs
+~/src/northsignal2
+bash-3.2$ git push hel[Kroku master
+The authenticity of host 'heroku.com (174.129.212.2)' can't be established.
+RSA key fingerprint is 8b:48:5e:67:0e:c9:16:47:32:f2:87:0c:1f:c8:60:ad.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'heroku.com,174.129.212.2' (RSA) to the list of known hosts.
+Counting objects: 98, done.
+Delta compression using up to 2 threads.
+Compressing objects:   1% (1/84)   Compressing objects:   2% (2/84)   Compressing objects:   3% (3/84)   Compressing objects:   4% (4/84)   Compressing objects:   5% (5/84)   Compressing objects:   7% (6/84)   Compressing objects:   8% (7/84)   Compressing objects:   9% (8/84)   Compressing objects:  10% (9/84)   Compressing objects:  11% (10/84)   Compressing objects:  13% (11/84)   Compressing objects:  14% (12/84)   Compressing objects:  15% (13/84)   Compressing objects:  16% (14/84)   Compressing objects:  17% (15/84)   Compressing objects:  19% (16/84)   Compressing objects:  20% (17/84)   Compressing objects:  21% (18/84)   Compressing objects:  22% (19/84)   Compressing objects:  23% (20/84)   Compressing objects:  25% (21/84)   Compressing objects:  26% (22/84)   Compressing objects:  27% (23/84)   Compressing objects:  28% (24/84)   Compressing objects:  29% (25/84)   Compressing objects:  30% (26/84)   Compressing objects:  32% (27/84)   Compressing objects:  33% (28/84)   Compressing objects:  34% (29/84)   Compressing objects:  35% (30/84)   Compressing objects:  36% (31/84)   Compressing objects:  38% (32/84)   Compressing objects:  39% (33/84)   Compressing objects:  40% (34/84)   Compressing objects:  41% (35/84)   Compressing objects:  42% (36/84)   Compressing objects:  44% (37/84)   Compressing objects:  45% (38/84)   Compressing objects:  46% (39/84)   Compressing objects:  47% (40/84)   Compressing objects:  48% (41/84)   Compressing objects:  50% (42/84)   Compressing objects:  51% (43/84)   Compressing objects:  52% (44/84)   Compressing objects:  53% (45/84)   Compressing objects:  54% (46/84)   Compressing objects:  55% (47/84)   Compressing objects:  57% (48/84)   Compressing objects:  58% (49/84)   Compressing objects:  59% (50/84)   Compressing objects:  60% (51/84)   Compressing objects:  61% (52/84)   Compressing objects:  63% (53/84)   Compressing objects:  64% (54/84)   Compressing objects:  65% (55/84)   Compressing objects:  66% (56/84)   Compressing objects:  67% (57/84)   Compressing objects:  69% (58/84)   Compressing objects:  70% (59/84)   Compressing objects:  71% (60/84)   Compressing objects:  72% (61/84)   Compressing objects:  73% (62/84)   Compressing objects:  75% (63/84)   Compressing objects:  76% (64/84)   Compressing objects:  77% (65/84)   Compressing objects:  78% (66/84)   Compressing objects:  79% (67/84)   Compressing objects:  80% (68/84)   Compressing objects:  82% (69/84)   Compressing objects:  83% (70/84)   Compressing objects:  84% (71/84)   Compressing objects:  85% (72/84)   Compressing objects:  86% (73/84)   Compressing objects:  88% (74/84)   Compressing objects:  89% (75/84)   Compressing objects:  90% (76/84)   Compressing objects:  91% (77/84)   Compressing objects:  92% (78/84)   Compressing objects:  94% (79/84)   Compressing objects:  95% (80/84)   Compressing objects:  96% (81/84)   Compressing objects:  97% (82/84)   Compressing objects:  98% (83/84)   Compressing objects: 100% (84/84)   Compressing objects: 100% (84/84), done.
+Writing objects:   1% (1/98)   Writing objects:   2% (2/98)   Writing objects:   3% (3/98)   Writing objects:   4% (4/98)   Writing objects:   5% (5/98)   Writing objects:   6% (6/98)   Writing objects:   7% (7/98)   Writing objects:   8% (8/98)   Writing objects:   9% (9/98)   Writing objects:  10% (10/98)   Writing objects:  11% (11/98)   Writing objects:  12% (12/98)   Writing objects:  13% (13/98)   Writing objects:  14% (14/98)   Writing objects:  15% (15/98)   Writing objects:  16% (16/98)   Writing objects:  17% (17/98)   Writing objects:  18% (18/98)   Writing objects:  19% (19/98)   Writing objects:  20% (20/98)   Writing objects:  21% (21/98)   Writing objects:  22% (22/98)   Writing objects:  23% (23/98)   Writing objects:  24% (24/98)   Writing objects:  25% (25/98)   Writing objects:  26% (26/98)   Writing objects:  27% (27/98)   Writing objects:  28% (28/98)   Writing objects:  29% (29/98)   Writing objects:  30% (30/98)   Writing objects:  31% (31/98)   Writing objects:  32% (32/98)   Writing objects:  33% (33/98)   Writing objects:  34% (34/98)   Writing objects:  35% (35/98)   Writing objects:  36% (36/98)   Writing objects:  37% (37/98)   Writing objects:  38% (38/98)   Writing objects:  39% (39/98)   Writing objects:  40% (40/98)   Writing objects:  41% (41/98)   Writing objects:  42% (42/98)   Writing objects:  43% (43/98)   Writing objects:  44% (44/98)   Writing objects:  45% (45/98)   Writing objects:  46% (46/98)   Writing objects:  47% (47/98)   Writing objects:  48% (48/98)   Writing objects:  50% (49/98)   Writing objects:  51% (50/98)   Writing objects:  52% (51/98)   Writing objects:  53% (52/98)   Writing objects:  54% (53/98)   Writing objects:  55% (54/98)   Writing objects:  56% (55/98)   Writing objects:  57% (56/98)   Writing objects:  58% (57/98)   Writing objects:  59% (58/98)   Writing objects:  60% (59/98)   Writing objects:  61% (60/98)   Writing objects:  63% (62/98)   Writing objects:  64% (63/98)   Writing objects:  65% (64/98)   Writing objects:  66% (65/98)   Writing objects:  67% (66/98)   Writing objects:  68% (67/98)   Writing objects:  69% (68/98)   Writing objects:  70% (69/98)   Writing objects:  71% (70/98)   Writing objects:  72% (71/98)   Writing objects:  73% (72/98)   Writing objects:  74% (73/98)   Writing objects:  75% (74/98)   Writing objects:  76% (75/98)   Writing objects:  77% (76/98)   Writing objects:  78% (77/98)   Writing objects:  79% (78/98)   Writing objects:  80% (79/98)   Writing objects:  81% (80/98)   Writing objects:  82% (81/98)   Writing objects:  83% (82/98)   Writing objects:  84% (83/98)   Writing objects:  85% (84/98)   Writing objects:  86% (85/98)   Writing objects:  87% (86/98)   Writing objects:  88% (87/98)   Writing objects:  89% (88/98)   Writing objects:  90% (89/98)   Writing objects:  91% (90/98)   Writing objects:  92% (91/98)   Writing objects:  93% (92/98)   Writing objects:  94% (93/98)   Writing objects:  95% (94/98)   Writing objects:  96% (95/98)   Writing objects:  97% (96/98)   Writing objects:  98% (97/98)   Writing objects: 100% (98/98)   Writing objects: 100% (98/98), 86.82 KiB, done.
+Total 98 (delta 19), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Rails app detected
+       Compiled slug size is 84K
+-----> Launching.......... done
+       http://gentle-earth-35.heroku.com deployed to Heroku
+
+To git@heroku.com:gentle-earth-35.git
+ * [new branch]      master -> master
+bash-3.2$ heroku open
+Opening http://gentle-earth-35.heroku.com/
+bash-3.2$ rero[K[K[K[Kheroku rename northsignal2
+http://northsignal2.heroku.com/ | git@heroku.com:northsignal2.git
+Git remote heroku updated
+bash-3.2$ heroku rename northsignal2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Copen[K
+Opening http://northsignal2.heroku.com/
+bash-3.2$ heroku openrename northsignal2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Copen[Kgit push heroku master[C[C[C[C[C[C[C[C[C[Cdirs[Kgit push heroku master[C[C[C[C[C[C[C[C[C[Cdirs[Kheroku create[C[C[C[C[C[C[C[C[C[Csudo gem install heroku[C[C[C[C[C[C[C[C[C[C[1Pgit push origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pcommit -a "adding index view"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Ppush origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pstatusadd app/views/search/*[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kpublic/*
+bash-3.2$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   public/osd.xml
+#
+# Changed but not updated:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   generate
+#	modified:   log/development.log
+#
+bash-3.2$ ;[Kgit statusadd public/*[C[C[C[C[C[C[C[C[C[C[5Pheroku openrename northsignal2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Copen[Kgit push heroku master[C[C[C[C[C[C[C[C[C[Cdirs[Kheroku create[C[C[C[C[C[C[C[C[C[Csudo gem install heroku[C[C[C[C[C[C[C[C[C[C[1Pgit push origin master
