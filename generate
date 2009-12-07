@@ -1,674 +1,0 @@
-Script started on Sat Dec  5 00:23:08 2009
-bash-3.2$ script/generate
-Usage: script/generate generator [options] [args]
-Rails Info:
-    -v, --version                    Show the Rails version number and quit.
-    -h, --help                       Show this help message and quit.
-General Options:
-    -p, --pretend                    Run but do not make any changes.
-    -f, --force                      Overwrite files that already exist.
-    -s, --skip                       Skip files that already exist.
-    -q, --quiet                      Suppress normal output.
-    -t, --backtrace                  Debugging: show backtrace on errors.
-    -c, --svn                        Modify files with subversion. (Note: svn must be in path)
-    -g, --git                        Modify files with git. (Note: git must be in path)
-
-
-Installed Generators
-  Builtin: controller, helper, integration_test, mailer, metal, migration, model, observer, performance_test, plugin, resource, scaffold, session_migration
-
-More are available at http://wiki.rubyonrails.org/rails/pages/AvailableGenerators
-  1. Download, for example, login_generator.zip
-  2. Unzip to directory /Users/dan/.rails/generators/login
-     to use the generator with all your Rails apps
-     or to /Users/dan/src/northsignal2/lib/generators/login
-     to use with this app only.
-  3. Run generate with no arguments for usage information
-       script/generate login
-
-Generator gems are also available:
-  1. gem search -r generator
-  2. gem install login_generator
-  3. script/generate login
-
-bash-3.2$ script/generate search
-Couldn't find 'search' generator
-bash-3.2$ script [Kgenerate\[K[K[K[K[K[K[K[K[K/generate controller search
-      exists  app/controllers/
-      exists  app/helpers/
-      create  app/views/search
-      exists  test/functional/
-      create  test/unit/helpers/
-      create  app/controllers/search_controller.rb
-      create  test/functional/search_controller_test.rb
-      create  app/helpers/search_helper.rb
-      create  test/unit/helpers/search_helper_test.rb
-bash-3.2$ !?git?:p
-  git push origin master
-bash-3.2$   git push origin master
-Everything up-to-date
-bash-3.2$ dirs
-~/src/northsignal2
-bash-3.2$ dirs[K[K[K[Kgit diff
-[?1h=diff --git a/app/controllers/application_controller.rb b/app/controllers/application_controller.rb[m
-index 6635a3f..fc50857 100644[m
---- a/app/controllers/application_controller.rb[m
-+++ b/app/controllers/application_controller.rb[m
-@@ -7,4 +7,12 @@ class ApplicationController < ActionController::Base[m
- [m
-   # Scrub sensitive parameters from your log[m
-   # filter_parameter_logging :password[m
-+  [m
-+  [m
-+  def search[m
-+    "hi there"[m
-+    [m
-+    render[m
-+  end[m
-+[m
- end[m
-diff --git a/log/development.log b/log/development.log[m
-index e69de29..e859e07 100644[m
---- a/log/development.log[m
-+++ b/log/development.log[m
-:[K[K@@ -0,0 +1,97 @@[m
-:[K[K[?1l>bash-3.2$ git[K[K[K!!
-git diff
-[?1h=diff --git a/app/controllers/application_controller.rb b/app/controllers/application_controller.rb[m
-index 6635a3f..fc50857 100644[m
---- a/app/controllers/application_controller.rb[m
-+++ b/app/controllers/application_controller.rb[m
-@@ -7,4 +7,12 @@ class ApplicationController < ActionController::Base[m
- [m
-   # Scrub sensitive parameters from your log[m
-   # filter_parameter_logging :password[m
-+  [m
-+  [m
-+  def search[m
-+    "hi there"[m
-+    [m
-+    render[m
-+  end[m
-+[m
- end[m
-diff --git a/log/development.log b/log/development.log[m
-index e69de29..e859e07 100644[m
---- a/log/development.log[m
-+++ b/log/development.log[m
-:[K[K@@ -0,0 +1,97 @@[m
-+[m
-+[m
-+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:17:55) [GET][m
-+[m
-+ActionController::RoutingError (No route matches "/search" with {:method=>:get}):[m
-+  [m
-+[m
-+Rendering rescues/layout (not_found)[m
-+[m
-+[m
-+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:18:56) [GET][m
-+[m
-+ActionController::RoutingError (No route matches "/search" with {:method=>:get}):[m
-+  [m
-+[m
-+Rendering rescues/layout (not_found)[m
-+[m
-+[m
-+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:19:02) [GET][m
-+[m
-:[K[K+ActionController::RoutingError (No route matches "/search.xml" with {:method=>:get}):[m
-:[K[K+  [m
-:[K[K+[m
-:[K[K+Rendering rescues/layout (not_found)[m
-+[m
-+[m
-+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:20:08) [GET][m
-+[m
-+ActionController::RoutingError (No route matches "/search.xml" with {:method=>:get}):[m
-+  [m
-+[m
-+Rendering rescues/layout (not_found)[m
-+[m
-+[m
-+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:20:46) [GET][m
-+[m
-+ActionController::RoutingError (No route matches "/search.xml" with {:method=>:get}):[m
-+  [m
-+[m
-+Rendering rescues/layout (not_found)[m
-+[m
-+[m
-+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:20:56) [GET][m
-+[m
-:[K[K+ActionController::RoutingError (No route matches "/search" with {:method=>:get}):[m
-+  [m
-+[m
-+Rendering rescues/layout (not_found)[m
-+[m
-+[m
-+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:21:41) [GET][m
-+[m
-+ActionController::RoutingError (No route matches "/search" with {:method=>:get}):[m
-+  [m
-+[m
-+Rendering rescues/layout (not_found)[m
-+[m
-+[m
-+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:21:54) [GET][m
-+[m
-+ActionController::RoutingError (No route matches "/search" with {:method=>:get}):[m
-+  [m
-+[m
-+Rendering rescues/layout (not_found)[m
-+[m
-:[K[K+[m
-+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:24:39) [GET][m
-+[m
-+ActionController::RoutingError (No route matches "/search" with {:method=>:get}):[m
-+  [m
-+[m
-+Rendering rescues/layout (not_found)[m
-+[m
-+[m
-+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:26:02) [GET][m
-+[m
-+ActionController::RoutingError (No route matches "/search" with {:method=>:get}):[m
-+  [m
-+[m
-+Rendering rescues/layout (not_found)[m
-+[m
-+[m
-+Processing ApplicationController#index (for 127.0.0.1 at 2009-12-05 00:26:23) [GET][m
-+[m
-+ActionController::RoutingError (No route matches "/search/foo/bar" with {:method=>:get}):[m
-+  [m
-:[K[K[?1l>bash-3.2$ s[Kgit status
-# On branch master
-# Changed but not updated:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   app/controllers/application_controller.rb
-#	modified:   log/development.log
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	app/controllers/search_controller.rb
-#	app/helpers/search_helper.rb
-#	db/development.sqlite3
-#	generate
-#	northsignal2.tmproj
-#	test/functional/
-#	test/unit/
-no changes added to commit (use "git add" and/or "git commit -a")
-bash-3.2$ git commit -a
-7[?47h[?1h=[1;22r[m[H[2J[22;1H".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 20L, 572C[>c[2;1H# Please enter the commit message for your changes. Lines starting
-# with '#' will be ignored, and an empty message aborts the commit.
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#       modified:   app/controllers/application_controller.rb
-#       modified:   log/development.log
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#       app/controllers/search_controller.rb
-#       app/helpers/search_helper.rb
-#       db/development.sqlite3
-#       generate
-#       northsignal2.tmproj
-#       test/functional/
-#       test/unit/
-[1m[34m~                                                                                                                [1;1H[m[22;1H[1m-- INSERT --[m[22;13H[K[1;1Hddddiin[1;4H[K[1;4H[1;3H[K[1;3H[1;2H[K[1;2H[1;1H[K[1;1Haaddddiinng  ddeeffaauullt  sseeaarrcch  ccoonntto[1;27H[K[1;27Htrroolllleer[2;21r[2;1H[L[1;22r[22;1H[1m-- INSERT --[2;1H[m[22;1H[K[2;1H[22;1H:wq".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 21L, 605C written
-[?1l>[2J[?47l8[master 5ae7de2] adding default search controller
- 2 files changed, 105 insertions(+), 0 deletions(-)
-bash-3.2$ 
-bash-3.2$ 
-bash-3.2$ 
-bash-3.2$ 
-bash-3.2$ 
-bash-3.2$ 
-bash-3.2$ 
-bash-3.2$ 
-bash-3.2$ git commit -a[C[C[C[C[C[C[C[C[C[C[K
-bash-3.2$ 
-bash-3.2$ 
-bash-3.2$ 
-bash-3.2$ git commit -a[3Pstatuscommit -a[C[C[C[C[C[C[C[C[C[C[K
-bash-3.2$ 
-bash-3.2$ fg
-bash: fg: current: no such job
-bash-3.2$ 
-bash-3.2$ 
-bash-3.2$ 
-bash-3.2$ 
-bash-3.2$ fggit commit -a
-# On branch master
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	app/controllers/search_controller.rb
-#	app/helpers/search_helper.rb
-#	db/development.sqlite3
-#	generate
-#	northsignal2.tmproj
-#	test/functional/
-#	test/unit/
-nothing added to commit but untracked files present (use "git add" to track)
-bash-3.2$ git log
-[?1h=commit 5ae7de2cc02d152ca0618fa6f866b6c7c032dc0d[m
-Author: danmiley <dan.miley@gmail.com>[m
-Date:   Sat Dec 5 00:34:01 2009 -0800[m
-[m
-    adding default search controller[m
-[m
-commit 33a4b818bd63107aec8480bf5f631cad3b5a6590[m
-Author: danmiley <dan.miley@gmail.com>[m
-Date:   Sat Dec 5 00:02:43 2009 -0800[m
-[m
-    first commit[m
-[m
-commit 220b1408dce782e958033c8bab8b9a232c69e9df[m
-Author: Dan Miley <dan.miley@gmail.com>[m
-Date:   Wed Nov 25 10:50:45 2009 -0800[m
-[m
-    first commit[m
-[K[?1l>bash-3.2$ dirs
-~/src/northsignal2
-bash-3.2$ git commit
-# On branch master
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	app/controllers/search_controller.rb
-#	app/helpers/search_helper.rb
-#	db/development.sqlite3
-#	generate
-#	northsignal2.tmproj
-#	test/functional/
-#	test/unit/
-nothing added to commit but untracked files present (use "git add" to track)
-bash-3.2$ git add .
-bash-3.2$ git status
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#	new file:   app/controllers/search_controller.rb
-#	new file:   app/helpers/search_helper.rb
-#	new file:   db/development.sqlite3
-#	new file:   generate
-#	new file:   northsignal2.tmproj
-#	new file:   test/functional/search_controller_test.rb
-#	new file:   test/unit/helpers/search_helper_test.rb
-#
-bash-3.2$ git committ
-git: 'committ' is not a git-command. See 'git --help'.
-
-Did you mean one of these?
-	commit
-	commit-tree
-bash-3.2$ git commit
-7[?47h[?1h=[1;22r[m[H[2J[22;1H".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 15L, 532C[>c[2;1H# Please enter the commit message for your changes. Lines starting
-# with '#' will be ignored, and an empty message aborts the commit.
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#       new file:   app/controllers/search_controller.rb
-#       new file:   app/helpers/search_helper.rb
-#       new file:   db/development.sqlite3
-#       new file:   generate
-#       new file:   northsignal2.tmproj
-#       new file:   test/functional/search_controller_test.rb
-#       new file:   test/unit/helpers/search_helper_test.rb
-#
-[1m[34m~                                                                                                                [17;1H~                                                                                                                [18;1H~                                                                                                                [19;1H~                                                                                                                [20;1H~                                                                                                                [21;1H~                                                                                                                [1;1H[m[22;1H[1m-- INSERT --[m[22;13H[K[1;1Hddddiinng  a[1;7H[K[1;7H[1;5H[K[1;5H[1;4H[K[1;4H[1;3H[K[1;3H[1;2H[K[1;2H[1;1H[K[1;1Haaddddiinng  sseeaarrcch  ccoonnttrroolllleerr:[1;25H[K[1;25H[2;21r[2;1H[L[1;22r[22;1H[1m-- INSERT --[2;1H[m[22;1H[K[2;1H[22;1H:wq".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 16L, 557C written
-[?1l>[2J[?47l8[master fdd5225] adding search controller
- 6 files changed, 378 insertions(+), 0 deletions(-)
- create mode 100644 app/controllers/search_controller.rb
- create mode 100644 app/helpers/search_helper.rb
- create mode 100644 db/development.sqlite3
- create mode 100644 generate
- create mode 100644 northsignal2.tmproj
- create mode 100644 test/functional/search_controller_test.rb
- create mode 100644 test/unit/helpers/search_helper_test.rb
-bash-3.2$ !?gith?:p
-  git remote add origin git@github.com:danmiley/northsignal2.git
-bash-3.2$ git push github mat[Kstert[K
-fatal: 'github' does not appear to be a git repository
-fatal: The remote end hung up unexpectedly
-bash-3.2$ dirs
-~/src/northsignal2
-bash-3.2$ dirsgit push github master[1P master[1P master[1P master[1P master[1P master[1P mastero masterr masteri masterg masteri mastern master
-Counting objects: 32, done.
-Delta compression using up to 2 threads.
-Compressing objects:   5% (1/20)   Compressing objects:  10% (2/20)   Compressing objects:  15% (3/20)   Compressing objects:  20% (4/20)   Compressing objects:  25% (5/20)   Compressing objects:  30% (6/20)   Compressing objects:  35% (7/20)   Compressing objects:  40% (8/20)   Compressing objects:  45% (9/20)   Compressing objects:  50% (10/20)   Compressing objects:  55% (11/20)   Compressing objects:  60% (12/20)   Compressing objects:  65% (13/20)   Compressing objects:  70% (14/20)   Compressing objects:  75% (15/20)   Compressing objects:  80% (16/20)   Compressing objects:  85% (17/20)   Compressing objects:  90% (18/20)   Compressing objects:  95% (19/20)   Compressing objects: 100% (20/20)   Compressing objects: 100% (20/20), done.
-Writing objects:   4% (1/23)   Writing objects:   8% (2/23)   Writing objects:  13% (3/23)   Writing objects:  17% (4/23)   Writing objects:  21% (5/23)   Writing objects:  26% (6/23)   Writing objects:  30% (7/23)   Writing objects:  34% (8/23)   Writing objects:  39% (9/23)   Writing objects:  43% (10/23)   Writing objects:  47% (11/23)   Writing objects:  52% (12/23)   Writing objects:  56% (13/23)   Writing objects:  60% (14/23)   Writing objects:  65% (15/23)   Writing objects:  69% (16/23)   Writing objects:  73% (17/23)   Writing objects:  78% (18/23)   Writing objects:  82% (19/23)   Writing objects:  86% (20/23)   Writing objects:  91% (21/23)   Writing objects:  95% (22/23)   Writing objects: 100% (23/23)   Writing objects: 100% (23/23), 5.31 KiB, done.
-Total 23 (delta 4), reused 0 (delta 0)
-To git@github.com:danmiley/northsignal2.git
-   33a4b81..fdd5225  master -> master
-bash-3.2$ git push origin master
-Everything up-to-date
-bash-3.2$ git push origin master[C[C[C[C[C[C[C[C[C[Cdirs[Kgit push github master[C[C[C[C[C[C[C[C[C[C  git remote add origin git@github.com:danmiley/northsignal2.git[C[C[C[C[C[C[C[C[C[Cgit commit[Kt[1Pstatus[1Padd .commit[6Pdirsgit logcommit -a "adding index view"
-fatal: Paths with -a does not make sense.
-bash-3.2$ dirs
-~/src/northsignal2
-bash-3.2$ dirsgit commit -a "adding index view"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Ppush origin master[C[C[C[C[C[C[C[C[C[Cdirs[Kgit push github master[C[C[C[C[C[C[C[C[C[C  git remote add origin git@github.com:danmiley/northsignal2.git[C[C[C[C[C[C[C[C[C[Cgit commit[Kt[1Pstatus[1Padd .commit[6Pdirsgit logcommit -a
-7[?47h[?1h=[1;22r[m[H[2J[22;1H".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 15L, 443C[>c[2;1H# Please enter the commit message for your changes. Lines starting
-# with '#' will be ignored, and an empty message aborts the commit.
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#       modified:   app/controllers/search_controller.rb
-#       modified:   generate
-#       modified:   log/development.log
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#       app/views/
-[1m[34m~                                                                                                                [17;1H~                                                                                                                [18;1H~                                                                                                                [19;1H~                                                                                                                [20;1H~                                                                                                                [21;1H~                                                                                                                [1;1H[m[22;1H[1m-- INSERT --[m[22;13H[K[1;1Hddddiinng  iinnddeex  vviieew[1;16H[K[1;16H[1;15H[K[1;15H[1;14H[K[1;14H[1;13H[K[1;13H[1;11H[K[1;11H[1;10H[K[1;10H[1;9H[K[1;9H[1;8H[K[1;8H[1;7H[K[1;7H[1;5H[K[1;5H[1;4H[K[1;4H[1;3H[K[1;3H[1;2H[K[1;2H[1;1H[K[1;1H::q[1;2H[K[1;2H[1;1H[K[1;1H[22;1H[K[1;1H[22;1H:q![22;1H[K[22;1H[?1l>[2J[?47l8Aborting commit due to empty commit message.
-bash-3.2$ d[Kgid[Kt status
-# On branch master
-# Changed but not updated:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   app/controllers/search_controller.rb
-#	modified:   generate
-#	modified:   log/development.log
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	app/views/
-no changes added to commit (use "git add" and/or "git commit -a")
-bash-3.2$ j[Kd[Kgit [K[Kt add appv[K/views/search/*
-bash-3.2$ git add app/views/search/*[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[K
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#	new file:   app/views/search/index.erb
-#
-# Changed but not updated:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   app/controllers/search_controller.rb
-#	modified:   generate
-#	modified:   log/development.log
-#
-bash-3.2$ git statusadd app/views/search/*[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[Kcommit -a[C[C[C[C[C[C[C[C[C[Cdirs[Kgit commit -a "adding index view"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Ppush origin master
-Everything up-to-date
-bash-3.2$ git push origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pstatusadd app/views/search/*[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[Kcommit -a[C[C[C[C[C[C[C[C[C[Cdirs[Kgit commit -a "adding index view"
-fatal: Paths with -a does not make sense.
-bash-3.2$ git commit -a "adding index view"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Ppush origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -a "adding index view"[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K
-7[?47h[?1h=[1;22r[m[H[2J[22;1H".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 12L, 383C[>c[2;1H# Please enter the commit message for your changes. Lines starting
-# with '#' will be ignored, and an empty message aborts the commit.
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#       modified:   app/controllers/search_controller.rb
-#       new file:   app/views/search/index.erb
-#       modified:   generate
-#       modified:   log/development.log
-#
-[1m[34m~                                                                                                                [14;1H~                                                                                                                [15;1H~                                                                                                                [16;1H~                                                                                                                [17;1H~                                                                                                                [18;1H~                                                                                                                [19;1H~                                                                                                                [20;1H~                                                                                                                [21;1H~                                                                                                                [1;1H[m[22;1H[K[22;1H: [1;1H[22;1H[1m-- INSERT --[1;1H[maaddddiinng  iinnddeex  vviieew[22;1H[K[1;17H
-[22;1H:wq".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 12L, 400C written
-[?1l>[2J[?47l8[master d03a972] adding index view
- 4 files changed, 135 insertions(+), 2 deletions(-)
- create mode 100644 app/views/search/index.erb
-bash-3.2$ git commit -a "adding index view"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Ppush origin master
-Counting objects: 18, done.
-Delta compression using up to 2 threads.
-Compressing objects:  12% (1/8)   Compressing objects:  25% (2/8)   Compressing objects:  37% (3/8)   Compressing objects:  50% (4/8)   Compressing objects:  62% (5/8)   Compressing objects:  75% (6/8)   Compressing objects:  87% (7/8)   Compressing objects: 100% (8/8)   Compressing objects: 100% (8/8), done.
-Writing objects:   9% (1/11)   Writing objects:  18% (2/11)   Writing objects:  27% (3/11)   Writing objects:  36% (4/11)   Writing objects:  45% (5/11)   Writing objects:  54% (6/11)   Writing objects:  63% (7/11)   Writing objects:  72% (8/11)   Writing objects:  81% (9/11)   Writing objects:  90% (10/11)   Writing objects: 100% (11/11)   Writing objects: 100% (11/11), 2.47 KiB, done.
-Total 11 (delta 5), reused 0 (delta 0)
-To git@github.com:danmiley/northsignal2.git
-   fdd5225..d03a972  master -> master
-bash-3.2$ git push origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pcommit -a "adding index view"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Ppush origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pstatusadd app/views/search/*[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[Kadd app/views/search/*[C[C[C[C[C[C[C[C[C[C[C[C[C[Cstatus[Kpush origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[Ccommit -a "adding index view"[Kpush origin master[C[C[C[C[C[C[C[C[C[C[Ksudo gem install heroku
-Password:
-
-Building native extensions.  This could take a while...
-Successfully installed rest-client-1.0.3
-Successfully installed configuration-1.1.0
-Successfully installed launchy-0.3.3
-Successfully installed json-1.2.0
-Successfully installed heroku-1.4
-5 gems installed
-Installing ri documentation for rest-client-1.0.3...
-Installing ri documentation for configuration-1.1.0...
-Installing ri documentation for launchy-0.3.3...
-Installing ri documentation for json-1.2.0...
-Installing ri documentation for heroku-1.4...
-Installing RDoc documentation for rest-client-1.0.3...
-Installing RDoc documentation for configuration-1.1.0...
-Installing RDoc documentation for launchy-0.3.3...
-Installing RDoc documentation for json-1.2.0...
-Installing RDoc documentation for heroku-1.4...
-bash-3.2$ 
-bash-3.2$ r[Kheroku create
-Enter your Heroku credentials.
-Email: dan.miley@gmail.com
-Password: 
-Uploading ssh public key /Users/dan/.ssh/id_rsa.pub
-Created http://gentle-earth-35.heroku.com/ | git@heroku.com:gentle-earth-35.git
-Git remote heroku added
-bash-3.2$ git[K[K[Kdirs
-~/src/northsignal2
-bash-3.2$ git push hel[Kroku master
-The authenticity of host 'heroku.com (174.129.212.2)' can't be established.
-RSA key fingerprint is 8b:48:5e:67:0e:c9:16:47:32:f2:87:0c:1f:c8:60:ad.
-Are you sure you want to continue connecting (yes/no)? yes
-Warning: Permanently added 'heroku.com,174.129.212.2' (RSA) to the list of known hosts.
-Counting objects: 98, done.
-Delta compression using up to 2 threads.
-Compressing objects:   1% (1/84)   Compressing objects:   2% (2/84)   Compressing objects:   3% (3/84)   Compressing objects:   4% (4/84)   Compressing objects:   5% (5/84)   Compressing objects:   7% (6/84)   Compressing objects:   8% (7/84)   Compressing objects:   9% (8/84)   Compressing objects:  10% (9/84)   Compressing objects:  11% (10/84)   Compressing objects:  13% (11/84)   Compressing objects:  14% (12/84)   Compressing objects:  15% (13/84)   Compressing objects:  16% (14/84)   Compressing objects:  17% (15/84)   Compressing objects:  19% (16/84)   Compressing objects:  20% (17/84)   Compressing objects:  21% (18/84)   Compressing objects:  22% (19/84)   Compressing objects:  23% (20/84)   Compressing objects:  25% (21/84)   Compressing objects:  26% (22/84)   Compressing objects:  27% (23/84)   Compressing objects:  28% (24/84)   Compressing objects:  29% (25/84)   Compressing objects:  30% (26/84)   Compressing objects:  32% (27/84)   Compressing objects:  33% (28/84)   Compressing objects:  34% (29/84)   Compressing objects:  35% (30/84)   Compressing objects:  36% (31/84)   Compressing objects:  38% (32/84)   Compressing objects:  39% (33/84)   Compressing objects:  40% (34/84)   Compressing objects:  41% (35/84)   Compressing objects:  42% (36/84)   Compressing objects:  44% (37/84)   Compressing objects:  45% (38/84)   Compressing objects:  46% (39/84)   Compressing objects:  47% (40/84)   Compressing objects:  48% (41/84)   Compressing objects:  50% (42/84)   Compressing objects:  51% (43/84)   Compressing objects:  52% (44/84)   Compressing objects:  53% (45/84)   Compressing objects:  54% (46/84)   Compressing objects:  55% (47/84)   Compressing objects:  57% (48/84)   Compressing objects:  58% (49/84)   Compressing objects:  59% (50/84)   Compressing objects:  60% (51/84)   Compressing objects:  61% (52/84)   Compressing objects:  63% (53/84)   Compressing objects:  64% (54/84)   Compressing objects:  65% (55/84)   Compressing objects:  66% (56/84)   Compressing objects:  67% (57/84)   Compressing objects:  69% (58/84)   Compressing objects:  70% (59/84)   Compressing objects:  71% (60/84)   Compressing objects:  72% (61/84)   Compressing objects:  73% (62/84)   Compressing objects:  75% (63/84)   Compressing objects:  76% (64/84)   Compressing objects:  77% (65/84)   Compressing objects:  78% (66/84)   Compressing objects:  79% (67/84)   Compressing objects:  80% (68/84)   Compressing objects:  82% (69/84)   Compressing objects:  83% (70/84)   Compressing objects:  84% (71/84)   Compressing objects:  85% (72/84)   Compressing objects:  86% (73/84)   Compressing objects:  88% (74/84)   Compressing objects:  89% (75/84)   Compressing objects:  90% (76/84)   Compressing objects:  91% (77/84)   Compressing objects:  92% (78/84)   Compressing objects:  94% (79/84)   Compressing objects:  95% (80/84)   Compressing objects:  96% (81/84)   Compressing objects:  97% (82/84)   Compressing objects:  98% (83/84)   Compressing objects: 100% (84/84)   Compressing objects: 100% (84/84), done.
-Writing objects:   1% (1/98)   Writing objects:   2% (2/98)   Writing objects:   3% (3/98)   Writing objects:   4% (4/98)   Writing objects:   5% (5/98)   Writing objects:   6% (6/98)   Writing objects:   7% (7/98)   Writing objects:   8% (8/98)   Writing objects:   9% (9/98)   Writing objects:  10% (10/98)   Writing objects:  11% (11/98)   Writing objects:  12% (12/98)   Writing objects:  13% (13/98)   Writing objects:  14% (14/98)   Writing objects:  15% (15/98)   Writing objects:  16% (16/98)   Writing objects:  17% (17/98)   Writing objects:  18% (18/98)   Writing objects:  19% (19/98)   Writing objects:  20% (20/98)   Writing objects:  21% (21/98)   Writing objects:  22% (22/98)   Writing objects:  23% (23/98)   Writing objects:  24% (24/98)   Writing objects:  25% (25/98)   Writing objects:  26% (26/98)   Writing objects:  27% (27/98)   Writing objects:  28% (28/98)   Writing objects:  29% (29/98)   Writing objects:  30% (30/98)   Writing objects:  31% (31/98)   Writing objects:  32% (32/98)   Writing objects:  33% (33/98)   Writing objects:  34% (34/98)   Writing objects:  35% (35/98)   Writing objects:  36% (36/98)   Writing objects:  37% (37/98)   Writing objects:  38% (38/98)   Writing objects:  39% (39/98)   Writing objects:  40% (40/98)   Writing objects:  41% (41/98)   Writing objects:  42% (42/98)   Writing objects:  43% (43/98)   Writing objects:  44% (44/98)   Writing objects:  45% (45/98)   Writing objects:  46% (46/98)   Writing objects:  47% (47/98)   Writing objects:  48% (48/98)   Writing objects:  50% (49/98)   Writing objects:  51% (50/98)   Writing objects:  52% (51/98)   Writing objects:  53% (52/98)   Writing objects:  54% (53/98)   Writing objects:  55% (54/98)   Writing objects:  56% (55/98)   Writing objects:  57% (56/98)   Writing objects:  58% (57/98)   Writing objects:  59% (58/98)   Writing objects:  60% (59/98)   Writing objects:  61% (60/98)   Writing objects:  63% (62/98)   Writing objects:  64% (63/98)   Writing objects:  65% (64/98)   Writing objects:  66% (65/98)   Writing objects:  67% (66/98)   Writing objects:  68% (67/98)   Writing objects:  69% (68/98)   Writing objects:  70% (69/98)   Writing objects:  71% (70/98)   Writing objects:  72% (71/98)   Writing objects:  73% (72/98)   Writing objects:  74% (73/98)   Writing objects:  75% (74/98)   Writing objects:  76% (75/98)   Writing objects:  77% (76/98)   Writing objects:  78% (77/98)   Writing objects:  79% (78/98)   Writing objects:  80% (79/98)   Writing objects:  81% (80/98)   Writing objects:  82% (81/98)   Writing objects:  83% (82/98)   Writing objects:  84% (83/98)   Writing objects:  85% (84/98)   Writing objects:  86% (85/98)   Writing objects:  87% (86/98)   Writing objects:  88% (87/98)   Writing objects:  89% (88/98)   Writing objects:  90% (89/98)   Writing objects:  91% (90/98)   Writing objects:  92% (91/98)   Writing objects:  93% (92/98)   Writing objects:  94% (93/98)   Writing objects:  95% (94/98)   Writing objects:  96% (95/98)   Writing objects:  97% (96/98)   Writing objects:  98% (97/98)   Writing objects: 100% (98/98)   Writing objects: 100% (98/98), 86.82 KiB, done.
-Total 98 (delta 19), reused 0 (delta 0)
-
------> Heroku receiving push
------> Rails app detected
-       Compiled slug size is 84K
------> Launching.......... done
-       http://gentle-earth-35.heroku.com deployed to Heroku
-
-To git@heroku.com:gentle-earth-35.git
- * [new branch]      master -> master
-bash-3.2$ heroku open
-Opening http://gentle-earth-35.heroku.com/
-bash-3.2$ rero[K[K[K[Kheroku rename northsignal2
-http://northsignal2.heroku.com/ | git@heroku.com:northsignal2.git
-Git remote heroku updated
-bash-3.2$ heroku rename northsignal2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Copen[K
-Opening http://northsignal2.heroku.com/
-bash-3.2$ heroku openrename northsignal2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Copen[Kgit push heroku master[C[C[C[C[C[C[C[C[C[Cdirs[Kgit push heroku master[C[C[C[C[C[C[C[C[C[Cdirs[Kheroku create[C[C[C[C[C[C[C[C[C[Csudo gem install heroku[C[C[C[C[C[C[C[C[C[C[1Pgit push origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pcommit -a "adding index view"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[11Ppush origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[12Pstatusadd app/views/search/*[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Kpublic/*
-bash-3.2$ git status
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#	new file:   public/osd.xml
-#
-# Changed but not updated:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   generate
-#	modified:   log/development.log
-#
-bash-3.2$ ;[Kgit statusadd public/*[C[C[C[C[C[C[C[C[C[C[5Pheroku openrename northsignal2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Copen[Kgit push heroku master[C[C[C[C[C[C[C[C[C[Cdirs[Kheroku create[C[C[C[C[C[C[C[C[C[Csudo gem install heroku[C[C[C[C[C[C[C[C[C[C[1Pgit push origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pcommit -a 
-7[?47h[?1h=[1;22r[m[H[2J[22;1H".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 11L, 320C[>c[2;1H# Please enter the commit message for your changes. Lines starting
-# with '#' will be ignored, and an empty message aborts the commit.
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#       modified:   generate
-#       modified:   log/development.log
-#       new file:   public/osd.xml
-#
-[1m[34m~                                                                                                                [13;1H~                                                                                                                [14;1H~                                                                                                                [15;1H~                                                                                                                [16;1H~                                                                                                                [17;1H~                                                                                                                [18;1H~                                                                                                                [19;1H~                                                                                                                [20;1H~                                                                                                                [21;1H~                                                                                                                [1;1H[m[22;1H[1m-- INSERT --[m[22;13H[K[1;1Hddiid[1;3H[K[1;3H[1;2H[K[1;2H[1;1H[K[1;1Haaddddiinng  dduummmmy  oossd[2;21r[2;1H[L[1;22r[22;1H[1m-- INSERT --[2;1H[m::w[2;2H[K[2;2H[2;1H[K[2;1H[22;1H[K[2;1H[22;1H:wa:w[22;3H[K[22;3Hq".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 12L, 337C written
-[?1l>[2J[?47l8[master c11f4c2] adding dummy osd
- 3 files changed, 133 insertions(+), 1 deletions(-)
- create mode 100644 public/osd.xml
-bash-3.2$ git commit -a [4Pstatusadd public/*[C[C[C[C[C[C[C[C[C[C[5Pheroku opengit add public/*[6Pstatusadd public/*[C[C[C[C[C[C[C[C[C[C[5Pheroku openrename northsignal2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Copen[Kgit push heroku master[C[C[C[C[C[C[C[C[C[Cdirs[Kheroku create[C[C[C[C[C[C[C[C[C[Csudo gem install heroku[C[C[C[C[C[C[C[C[C[C[1Pgit push origin master
-Counting objects: 12, done.
-Delta compression using up to 2 threads.
-Compressing objects:  14% (1/7)   Compressing objects:  28% (2/7)   Compressing objects:  42% (3/7)   Compressing objects:  57% (4/7)   Compressing objects:  71% (5/7)   Compressing objects:  85% (6/7)   Compressing objects: 100% (7/7)   Compressing objects: 100% (7/7), done.
-Writing objects:  14% (1/7)   Writing objects:  28% (2/7)   Writing objects:  42% (3/7)   Writing objects:  57% (4/7)   Writing objects:  71% (5/7)   Writing objects:  85% (6/7)   Writing objects: 100% (7/7)   Writing objects: 100% (7/7), 3.35 KiB, done.
-Total 7 (delta 5), reused 0 (delta 0)
-To git@github.com:danmiley/northsignal2.git
-   d03a972..c11f4c2  master -> master
-bash-3.2$ git push origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pcommit -a [4Pstatusadd public/*[C[C[C[C[C[C[C[C[C[C[5Pheroku openrename northsignal2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Copen[Kgit push heroku master
-Warning: Permanently added the RSA host key for IP address '75.101.163.44' to the list of known hosts.
-Counting objects: 12, done.
-Delta compression using up to 2 threads.
-Compressing objects:  14% (1/7)   Compressing objects:  28% (2/7)   Compressing objects:  42% (3/7)   Compressing objects:  57% (4/7)   Compressing objects:  71% (5/7)   Compressing objects:  85% (6/7)   Compressing objects: 100% (7/7)   Compressing objects: 100% (7/7), done.
-Writing objects:  14% (1/7)   Writing objects:  28% (2/7)   Writing objects:  42% (3/7)   Writing objects:  57% (4/7)   Writing objects:  71% (5/7)   Writing objects:  85% (6/7)   Writing objects: 100% (7/7)   Writing objects: 100% (7/7), 3.35 KiB, done.
-Total 7 (delta 5), reused 0 (delta 0)
-
------> Heroku receiving push
------> Rails app detected
-       Compiled slug size is 84K
------> Launching............ done
-       http://northsignal2.heroku.com deployed to Heroku
-
-To git@heroku.com:northsignal2.git
-   d03a972..c11f4c2  master -> master
-bash-3.2$ git push heroku masterorigin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pcommit -a [4Pstatusadd public/*
-bash-3.2$ git status
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#	modified:   public/index.html
-#	modified:   public/osd.xml
-#
-# Changed but not updated:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   app/views/search/index.erb
-#	modified:   generate
-#	modified:   log/development.log
-#
-bash-3.2$ hist[K[K[K[Kgt[Kit help
-usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
-           [-p|--paginate|--no-pager]
-           [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE]
-           [--help] COMMAND [ARGS]
-
-The most commonly used git commands are:
-   add        Add file contents to the index
-   bisect     Find by binary search the change that introduced a bug
-   branch     List, create, or delete branches
-   checkout   Checkout a branch or paths to the working tree
-   clone      Clone a repository into a new directory
-   commit     Record changes to the repository
-   diff       Show changes between commits, commit and working tree, etc
-   fetch      Download objects and refs from another repository
-   grep       Print lines matching a pattern
-   init       Create an empty git repository or reinitialize an existing one
-   log        Show commit logs
-   merge      Join two or more development histories together
-   mv         Move or rename a file, a directory, or a symlink
-   pull       Fetch from and merge with another repository or a local branch
-   push       Update remote refs along with associated objects
-   rebase     Forward-port local commits to the updated upstream head
-   reset      Reset current HEAD to the specified state
-   rm         Remove files from the working tree and from the index
-   show       Show various types of objects
-   status     Show the working tree status
-   tag        Create, list, delete or verify a tag object signed with GPG
-
-See 'git help COMMAND' for more information on a specific command.
-bash-3.2$ git checkout app/views/*
-error: pathspec 'app/views/layouts' did not match any file(s) known to git.
-bash-3.2$ dirs
-~/src/northsignal2
-bash-3.2$ ls
-README			db			log			test
-Rakefile		doc			northsignal2.tmproj	tmp
-app			generate		public			vendor
-config			lib			script
-bash-3.2$ cd[K[Kg[Kgit status
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#	modified:   public/index.html
-#	modified:   public/osd.xml
-#
-# Changed but not updated:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   app/views/search/index.erb
-#	modified:   generate
-#	modified:   log/development.log
-#
-bash-3.2$ git g[Kcheckout[K[K[K[K[K[K[K[K[K[K[K[Kgit statusls[Kdirsgit checkout app/views/*[C[C[C[C[C[C[C[C[C[C[C[C[C[Chelp[Kstatusadd public/*push heroku masterorigin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pcommit -a [4Pstatuscommit -a 
-7[?47h[?1h=[1;22r[m[H[2J[22;1H".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 13L, 393C[>c[2;1H# Please enter the commit message for your changes. Lines starting
-# with '#' will be ignored, and an empty message aborts the commit.
-# On branch master
-# Changes to be committed:
-#   (use "git reset HEAD <file>..." to unstage)
-#
-#       modified:   app/views/search/index.erb
-#       modified:   generate
-#       modified:   log/development.log
-#       modified:   public/index.html
-#       modified:   public/osd.xml
-#
-[1m[34m~                                                                                                                [15;1H~                                                                                                                [16;1H~                                                                                                                [17;1H~                                                                                                                [18;1H~                                                                                                                [19;1H~                                                                                                                [20;1H~                                                                                                                [21;1H~                                                                                                                [1;1H[m[22;1H[1m-- INSERT --[m[22;13H[K[1;1Hi  aaddddiinng[1;8H[K[1;8H[1;7H[K[1;7H[1;6H[K[1;6H[1;5H[K[1;5H[1;4H[K[1;4H[1;3H[K[1;3H[1;1H[K[1;1Haaddddiinng  oossd  pprreeffeecct[1;18H[K[1;18Hcttc[1;19H[K[1;19H[1;18H[K[1;18H[1;17H[K[1;17Hettcch  lliinne  aannd  oossd  ttuunneeuup[2;21r[2;1H[L[1;22r[22;1H[1m-- INSERT --[2;1H[m:[2;1H[K[2;1Hccaannnneed  ddttaaa [2;11H[K[2;11H[2;10H[K[2;10H[2;9H[K[2;9Hdaatta  r[2;13H[K[2;13H jjssoon  sso  ffaar[3;21r[3;1H[L[1;22r[22;1H[1m-- INSERT --[3;1H[m[22;1H[K[3;1H[22;1H:wq".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 15L, 457C written
-[?1l>[2J[?47l8[master fed836f] adding osd prefetch line and osd tuneup canned data json so far
- 5 files changed, 132 insertions(+), 12 deletions(-)
-bash-3.2$ git commit -a [4Pstatusls[Kdirsgit checkout app/views/*[C[C[C[C[C[C[C[C[C[C[C[C[C[Chelp[Kstatusadd public/*push heroku masterorigin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pcommit -a push origin master
-Counting objects: 23, done.
-Delta compression using up to 2 threads.
-Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
-Writing objects:   8% (1/12)   Writing objects:  16% (2/12)   Writing objects:  25% (3/12)   Writing objects:  33% (4/12)   Writing objects:  41% (5/12)   Writing objects:  50% (6/12)   Writing objects:  58% (7/12)   Writing objects:  66% (8/12)   Writing objects:  75% (9/12)   Writing objects:  83% (10/12)   Writing objects:  91% (11/12)   Writing objects: 100% (12/12)   Writing objects: 100% (12/12), 2.78 KiB, done.
-Total 12 (delta 8), reused 0 (delta 0)
-To git@github.com:danmiley/northsignal2.git
-   c11f4c2..fed836f  master -> master
-bash-3.2$ git push origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pcommit -a [4Pstatusls[Kdirsgit checkout app/views/*[C[C[C[C[C[C[C[C[C[C[C[C[C[Chelp[Kstatusadd public/*push heroku master
-Counting objects: 23, done.
-Delta compression using up to 2 threads.
-Compressing objects:  10% (1/10)   Compressing objects:  20% (2/10)   Compressing objects:  30% (3/10)   Compressing objects:  40% (4/10)   Compressing objects:  50% (5/10)   Compressing objects:  60% (6/10)   Compressing objects:  70% (7/10)   Compressing objects:  80% (8/10)   Compressing objects:  90% (9/10)   Compressing objects: 100% (10/10)   Compressing objects: 100% (10/10), done.
-Writing objects:   8% (1/12)   Writing objects:  16% (2/12)   Writing objects:  25% (3/12)   Writing objects:  33% (4/12)   Writing objects:  41% (5/12)   Writing objects:  50% (6/12)   Writing objects:  58% (7/12)   Writing objects:  66% (8/12)   Writing objects:  75% (9/12)   Writing objects:  83% (10/12)   Writing objects:  91% (11/12)   Writing objects: 100% (12/12)   Writing objects: 100% (12/12), 2.78 KiB, done.
-Total 12 (delta 8), reused 0 (delta 0)
-
------> Heroku receiving push
------> Rails app detected
-       Compiled slug size is 88K
------> Launching......... done
-       http://northsignal2.heroku.com deployed to Heroku
-
-To git@heroku.com:northsignal2.git
-   c11f4c2..fed836f  master -> master
-bash-3.2$ git diff[K[K[K[Kstuat[K[K[Katut[Ks
-# On branch master
-# Changed but not updated:
-#   (use "git add <file>..." to update what will be committed)
-#   (use "git checkout -- <file>..." to discard changes in working directory)
-#
-#	modified:   app/controllers/search_controller.rb
-#	modified:   app/views/search/index.erb
-#	modified:   generate
-#	modified:   log/development.log
-#	modified:   public/favicon.ico
-#
-# Untracked files:
-#   (use "git add <file>..." to include in what will be committed)
-#
-#	app/views/search/_@first_link.html.erb
-no changes added to commit (use "git add" and/or "git commit -a")
-bash-3.2$ 

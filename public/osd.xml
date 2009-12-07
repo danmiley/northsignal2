@@ -13,8 +13,8 @@
     <InputEncoding>UTF-8</InputEncoding>
     <OutputEncoding>UTF-8</OutputEncoding>
     <Image width="16" height="16" type="image/x-icon">http://northsignal2.heroku.com/favicon.ico</Image> 
-    <Url type="text/html" method="GET" template="http://northsignal2.heroku.com/search/index/foo?s={searchTerms}"></Url>
-    <Url type="application/x-suggestions+json" template="http://northsignal2.heroku.com/search/index/foo.json?s={searchTerms}"/>
+    <Url type="text/html" method="GET" template="http://northsignal2.heroku.com/search/index/foo?app=ps&s={searchTerms}"></Url>
+    <Url type="application/x-suggestions+json" template="http://northsignal2.heroku.com/search/index/foo.json?app=ps&s={searchTerms}"/>
     <Query role="example" searchTerms="iphone" />
 
     <moz:SearchForm>http://northsignal2.heroku.com</moz:SearchForm>

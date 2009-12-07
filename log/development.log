@@ -185,3 +185,340 @@ Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 20:38:32)
   Parameters: {"id"=>"foo", "s"=>"foo bara"}
 Rendering search/index
 Completed in 1413ms (View: 2, DB: 0) | 200 OK [http://localhost/search/index/foo.json?s=foo%20bara]
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (6.7ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (669.6ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (169.3ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSearches (20091207052305)
+  [4;36;1mSQL (1.2ms)[0m   [0;1mCREATE TABLE "searches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "candidate" varchar(255), "app" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20091207052305')[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mPRAGMA index_list("searches")[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (7.1ms)[0m   [0;1mDROP TABLE "searches"[0m
+  [4;35;1mSQL (8.4ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20091207052305'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.9ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSearches (20091207052305)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.4ms)[0m   [0mCREATE TABLE "searches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "candidate" varchar(255), "app" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.5ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091207052305')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("searches")[0m
+  [4;36;1mSQL (1.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (4.9ms)[0m   [0;1mDROP TABLE "searches"[0m
+  [4;35;1mSQL (6.5ms)[0m   [0mDELETE FROM schema_migrations WHERE version = '20091207052305'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (14.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSearches (20091207062213)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.3ms)[0m   [0mCREATE TABLE "searches" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "candidate" varchar(255), "app" varchar(255), "priority" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091207062213')[0m
+  [4;35;1mSQL (0.7ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mPRAGMA index_list("searches")[0m
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 22:43:27) [GET]
+  Parameters: {"id"=>"foo", "s"=>"foo"}
+  [4;36;1mSQL (37.5ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (37.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `has_finder' for #<Class:0x104482a88>):
+  app/models/search.rb:3
+  app/controllers/search_controller.rb:8:in `index'
+
+Rendered rescues/_trace (569.2ms)
+Rendered rescues/_request_and_response (134.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 22:48:31) [GET]
+  Parameters: {"id"=>"foo", "s"=>"foo"}
+  [4;36;1mSQL (1.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.6ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `has_finder' for #<Class:0x104483b90>):
+  app/models/search.rb:3
+  app/controllers/search_controller.rb:8:in `index'
+
+Rendered rescues/_trace (142.5ms)
+Rendered rescues/_request_and_response (3.7ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 22:51:33) [GET]
+  Parameters: {"id"=>"foo", "s"=>"foo"}
+  [4;36;1mSQL (1.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.3ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `has_finder' for #<Class:0x104478f38>):
+  app/models/search.rb:3
+  app/controllers/search_controller.rb:8:in `index'
+
+Rendered rescues/_trace (187.8ms)
+Rendered rescues/_request_and_response (3.9ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 22:51:39) [GET]
+  Parameters: {"id"=>"foo", "s"=>"foo"}
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NoMethodError (undefined method `has_finder' for #<Class:0x104281c20>):
+  app/models/search.rb:3
+  app/controllers/search_controller.rb:8:in `index'
+
+Rendered rescues/_trace (94.9ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 22:51:58) [GET]
+  Parameters: {"id"=>"foo", "s"=>"foo"}
+  [4;36;1mSQL (0.8ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.4ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `has_finder' for #<Class:0x1044ec1e0>):
+  app/models/search.rb:2
+  app/controllers/search_controller.rb:8:in `index'
+
+Rendered rescues/_trace (80.0ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 22:52:22) [GET]
+  Parameters: {"id"=>"foo", "s"=>"foo"}
+  [4;36;1mSQL (1.1ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.5ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+NameError (undefined local variable or method `has_finder' for #<Class:0x104478fb0>):
+  app/models/search.rb:2
+  app/controllers/search_controller.rb:8:in `index'
+
+Rendered rescues/_trace (76.0ms)
+Rendered rescues/_request_and_response (3.2ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 22:55:58) [GET]
+  Parameters: {"id"=>"foo", "s"=>"foo"}
+  [4;36;1mSearch Load (0.9ms)[0m   [0;1mSELECT * FROM "searches" [0m
+Rendering search/index
+Completed in 585ms (View: 577, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=foo]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 23:12:32) [GET]
+  Parameters: {"id"=>"foo", "s"=>"foo"}
+
+ArgumentError (Unknown key(s): app):
+  app/controllers/search_controller.rb:8:in `index'
+
+Rendered rescues/_trace (310.1ms)
+Rendered rescues/_request_and_response (0.8ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 23:12:54) [GET]
+  Parameters: {"id"=>"foo", "s"=>"foo"}
+  [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE '%@search_terms%') [0m
+Rendering search/index
+Completed in 40ms (View: 27, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=foo]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 23:14:08) [GET]
+  Parameters: {"id"=>"foo", "s"=>"foo"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE '%@search_terms%') [0m
+Rendering search/index
+Completed in 13ms (View: 2, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=foo]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 23:14:21) [GET]
+  Parameters: {"id"=>"foo", "s"=>"iphone"}
+  [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE '%@search_terms%') [0m
+Rendering search/index
+Completed in 12ms (View: 2, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=iphone]
+
+
+Processing ApplicationController#index to json (for 127.0.0.1 at 2009-12-06 23:15:48) [GET]
+  Parameters: {"id"=>"foo", "s"=>"iphone"}
+
+SyntaxError (/Users/dan/src/northsignal2/app/controllers/search_controller.rb:8: syntax error, unexpected tIVAR
+...e LIKE ?", "%" . @search_terms . "%"])
+                              ^
+/Users/dan/src/northsignal2/app/controllers/search_controller.rb:8: syntax error, unexpected ']', expecting kEND
+...?", "%" . @search_terms . "%"])
+                              ^):
+  
+
+Rendered rescues/_trace (64.0ms)
+Rendered rescues/_request_and_response (31.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 23:16:13) [GET]
+  Parameters: {"id"=>"foo", "s"=>"iphone"}
+  [4;36;1mSearch Load (19.7ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE '%iphone%') [0m
+Rendering search/index
+Completed in 58ms (View: 25, DB: 20) | 200 OK [http://localhost/search/index/foo.json?s=iphone]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 23:16:36) [GET]
+  Parameters: {"id"=>"foo", "s"=>"and"}
+  [4;35;1mSearch Load (0.8ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE '%and%') [0m
+Rendering search/index
+Completed in 19ms (View: 9, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=and]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 23:18:58) [GET]
+  Parameters: {"id"=>"foo", "s"=>"and"}
+  [4;36;1mSearch Load (1.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE '%and%') [0m
+Rendering search/index
+Completed in 30ms (View: 14, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=and]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 23:22:38) [GET]
+  Parameters: {"id"=>"foo", "s"=>"and"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE '%and%') ORDER BY priority DESC LIMIT 10[0m
+Rendering search/index
+Completed in 47ms (View: 24, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=and]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 23:22:44) [GET]
+  Parameters: {"id"=>"foo", "s"=>"and"}
+  [4;36;1mSearch Load (1.3ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE '%and%') ORDER BY priority DESC LIMIT 10[0m
+Rendering search/index
+Completed in 23ms (View: 3, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=and]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 23:22:48) [GET]
+  Parameters: {"id"=>"foo", "s"=>"and"}
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE '%and%') ORDER BY priority DESC LIMIT 10[0m
+Rendering search/index
+Completed in 28ms (View: 2, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=and]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 23:29:58) [GET]
+  Parameters: {"id"=>"foo", "s"=>"and"}
+  [4;36;1mSearch Load (1.2ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE '%and%') ORDER BY priority DESC LIMIT 10[0m
+Rendering search/index
+Completed in 18ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=and]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 23:31:19) [GET]
+  Parameters: {"id"=>"foo", "s"=>"and"}
+  [4;35;1mSearch Load (1.2ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE '%and%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 13ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=and]

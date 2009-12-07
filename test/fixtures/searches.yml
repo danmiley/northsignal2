@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  candidate: iphone 3gs
+  app: ps
+  priority: 1
+
+two:
+  candidate: android mark 2
+  app: ps
+  priority: 1
+  
+
+three:
+  candidate: android prio 2
+  app: ps
+  priority: 2
+
+
+four:
+  candidate: android prio 3
+  app: ps
+  priority: 3  
