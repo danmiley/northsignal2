@@ -2,20 +2,20 @@
 
 <OpenSearchDescription xmlns="http://a9.com/-/spec/opensearch/1.1/" 
                        xmlns:moz="http://www.mozilla.org/2006/browser/search/"> 
-    <ShortName>adrianbanks</ShortName>
-    <LongName>Search adrianbanks.co.uk</LongName> 
-    <Description>Search adrianbanks.co.uk</Description> 
-    <Developer>Adrian Banks</Developer>
-    <Attribution>Copyright adrianbanks.co.uk</Attribution>
+    <ShortName>northsignal</ShortName>
+    <LongName>Search northsignal</LongName> 
+    <Description>Search northsignal</Description> 
+    <Developer>dan miley</Developer>
+    <Attribution>Copyright dan miley</Attribution>
     <AdultContent>false</AdultContent>
 
     <Language>en-us</Language>
     <InputEncoding>UTF-8</InputEncoding>
     <OutputEncoding>UTF-8</OutputEncoding>
-    <Image width="16" height="16" type="image/x-icon">http://www.adrianbanks.co.uk/favicon.ico</Image> 
-    <Url type="text/html" method="GET" template="http://www.adrianbanks.co.uk/?s={searchTerms}"></Url>
-    <Url type="application/x-suggestions+json" template="http://ff.search.yahoo.com/gossip?output=fxjson&amp;command={searchTerms}"/>
-    <Query role="example" searchTerms="msdn" />
+    <Image width="16" height="16" type="image/x-icon">http://northsignal2.heroku.com/favicon.ico</Image> 
+    <Url type="text/html" method="GET" template="http://northsignal2.heroku.com/search/index/foo?s={searchTerms}"></Url>
+    <Url type="application/x-suggestions+json" template="http://northsignal2.heroku.com/search/index/foo.json?s={searchTerms}"/>
+    <Query role="example" searchTerms="iphone" />
 
-    <moz:SearchForm>http://www.adrianbanks.co.uk</moz:SearchForm>
+    <moz:SearchForm>http://northsignal2.heroku.com</moz:SearchForm>
 </OpenSearchDescription>

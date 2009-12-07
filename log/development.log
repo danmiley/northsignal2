@@ -125,3 +125,9 @@ Processing SearchController#index (for 127.0.0.1 at 2009-12-05 16:00:37) [GET]
   Parameters: {"id"=>"bar"}
 Rendering search/index
 Completed in 95ms (View: 2, DB: 0) | 200 OK [http://localhost/search/index/bar]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-06 19:45:49) [GET]
+  Parameters: {"id"=>"foo"}
+Rendering search/index
+Completed in 42ms (View: 39, DB: 0) | 200 OK [http://localhost/search/index/foo.json]

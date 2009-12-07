@@ -504,4 +504,115 @@ bash-3.2$ git status
 #	modified:   generate
 #	modified:   log/development.log
 #
-bash-3.2$ ;[Kgit statusadd public/*[C[C[C[C[C[C[C[C[C[C[5Pheroku openrename northsignal2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Copen[Kgit push heroku master[C[C[C[C[C[C[C[C[C[Cdirs[Kheroku create[C[C[C[C[C[C[C[C[C[Csudo gem install heroku[C[C[C[C[C[C[C[C[C[C[1Pgit push origin master
+bash-3.2$ ;[Kgit statusadd public/*[C[C[C[C[C[C[C[C[C[C[5Pheroku openrename northsignal2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Copen[Kgit push heroku master[C[C[C[C[C[C[C[C[C[Cdirs[Kheroku create[C[C[C[C[C[C[C[C[C[Csudo gem install heroku[C[C[C[C[C[C[C[C[C[C[1Pgit push origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pcommit -a 
+7[?47h[?1h=[1;22r[m[H[2J[22;1H".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 11L, 320C[>c[2;1H# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#       modified:   generate
+#       modified:   log/development.log
+#       new file:   public/osd.xml
+#
+[1m[34m~                                                                                                                [13;1H~                                                                                                                [14;1H~                                                                                                                [15;1H~                                                                                                                [16;1H~                                                                                                                [17;1H~                                                                                                                [18;1H~                                                                                                                [19;1H~                                                                                                                [20;1H~                                                                                                                [21;1H~                                                                                                                [1;1H[m[22;1H[1m-- INSERT --[m[22;13H[K[1;1Hddiid[1;3H[K[1;3H[1;2H[K[1;2H[1;1H[K[1;1Haaddddiinng  dduummmmy  oossd[2;21r[2;1H[L[1;22r[22;1H[1m-- INSERT --[2;1H[m::w[2;2H[K[2;2H[2;1H[K[2;1H[22;1H[K[2;1H[22;1H:wa:w[22;3H[K[22;3Hq".git/COMMIT_EDITMSG" ".git/COMMIT_EDITMSG" 12L, 337C written
+[?1l>[2J[?47l8[master c11f4c2] adding dummy osd
+ 3 files changed, 133 insertions(+), 1 deletions(-)
+ create mode 100644 public/osd.xml
+bash-3.2$ git commit -a [4Pstatusadd public/*[C[C[C[C[C[C[C[C[C[C[5Pheroku opengit add public/*[6Pstatusadd public/*[C[C[C[C[C[C[C[C[C[C[5Pheroku openrename northsignal2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Copen[Kgit push heroku master[C[C[C[C[C[C[C[C[C[Cdirs[Kheroku create[C[C[C[C[C[C[C[C[C[Csudo gem install heroku[C[C[C[C[C[C[C[C[C[C[1Pgit push origin master
+Counting objects: 12, done.
+Delta compression using up to 2 threads.
+Compressing objects:  14% (1/7)   Compressing objects:  28% (2/7)   Compressing objects:  42% (3/7)   Compressing objects:  57% (4/7)   Compressing objects:  71% (5/7)   Compressing objects:  85% (6/7)   Compressing objects: 100% (7/7)   Compressing objects: 100% (7/7), done.
+Writing objects:  14% (1/7)   Writing objects:  28% (2/7)   Writing objects:  42% (3/7)   Writing objects:  57% (4/7)   Writing objects:  71% (5/7)   Writing objects:  85% (6/7)   Writing objects: 100% (7/7)   Writing objects: 100% (7/7), 3.35 KiB, done.
+Total 7 (delta 5), reused 0 (delta 0)
+To git@github.com:danmiley/northsignal2.git
+   d03a972..c11f4c2  master -> master
+bash-3.2$ git push origin master[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pcommit -a [4Pstatusadd public/*[C[C[C[C[C[C[C[C[C[C[5Pheroku openrename northsignal2[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Copen[Kgit push heroku master
+Warning: Permanently added the RSA host key for IP address '75.101.163.44' to the list of known hosts.
+Counting objects: 12, done.
+Delta compression using up to 2 threads.
+Compressing objects:  14% (1/7)   Compressing objects:  28% (2/7)   Compressing objects:  42% (3/7)   Compressing objects:  57% (4/7)   Compressing objects:  71% (5/7)   Compressing objects:  85% (6/7)   Compressing objects: 100% (7/7)   Compressing objects: 100% (7/7), done.
+Writing objects:  14% (1/7)   Writing objects:  28% (2/7)   Writing objects:  42% (3/7)   Writing objects:  57% (4/7)   Writing objects:  71% (5/7)   Writing objects:  85% (6/7)   Writing objects: 100% (7/7)   Writing objects: 100% (7/7), 3.35 KiB, done.
+Total 7 (delta 5), reused 0 (delta 0)
+
+-----> Heroku receiving push
+-----> Rails app detected
+       Compiled slug size is 84K
+-----> Launching............ done
+       http://northsignal2.heroku.com deployed to Heroku
+
+To git@heroku.com:northsignal2.git
+   d03a972..c11f4c2  master -> master
+bash-3.2$ git push heroku masterorigin[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[8Pcommit -a [4Pstatusadd public/*
+bash-3.2$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   public/index.html
+#	modified:   public/osd.xml
+#
+# Changed but not updated:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   app/views/search/index.erb
+#	modified:   generate
+#	modified:   log/development.log
+#
+bash-3.2$ hist[K[K[K[Kgt[Kit help
+usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
+           [-p|--paginate|--no-pager]
+           [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE]
+           [--help] COMMAND [ARGS]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and merge with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+See 'git help COMMAND' for more information on a specific command.
+bash-3.2$ git checkout app/views/*
+error: pathspec 'app/views/layouts' did not match any file(s) known to git.
+bash-3.2$ dirs
+~/src/northsignal2
+bash-3.2$ ls
+README			db			log			test
+Rakefile		doc			northsignal2.tmproj	tmp
+app			generate		public			vendor
+config			lib			script
+bash-3.2$ cd[K[Kg[Kgit status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   public/index.html
+#	modified:   public/osd.xml
+#
+# Changed but not updated:
+#   (use "git add <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	modified:   app/views/search/index.erb
+#	modified:   generate
+#	modified:   log/development.log
+#
+bash-3.2$ git g[Kcheckout
