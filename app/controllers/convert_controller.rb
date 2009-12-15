@@ -62,7 +62,7 @@ class ConvertController < ApplicationController
     # normalize case, chomp, and singularize
     result = ''
     
-      result = str.split.map{ |x| x.chomp.split.downcase.pluralize.singularize + " " }.to_s #intended to work for multi tokens
+      result = str.split.map{ |x| x.chomp.downcase.pluralize.singularize + " " }.to_s.strip #intended to work for multi tokens
     
     #  result = str
     

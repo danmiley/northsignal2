@@ -1420,3 +1420,180 @@ Processing ConvertController#index to json (for 127.0.0.1 at 2009-12-14 23:48:46
   Parameters: {"id"=>"foo", "output"=>"searches", "input"=>"dummysearchdata.txt"}
 Rendering convert/index
 Completed in 52ms (View: 2, DB: 0) | 200 OK [http://localhost/convert/index/foo.json?input=dummysearchdata.txt&output=searches]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 00:05:37) [GET]
+  Parameters: {"app"=>"ps2", "id"=>"foo", "s"=>"ipho"}
+  [4;35;1mSearch Load (1.1ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'ipho%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 67ms (View: 21, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=ipho&app=ps2]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 00:05:51) [GET]
+  Parameters: {"app"=>"ps2", "id"=>"foo", "s"=>"And"}
+  [4;36;1mSearch Load (0.8ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'And%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 16ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=And&app=ps2]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 00:07:38) [GET]
+  Parameters: {"id"=>"foo", "s"=>"iphone"}
+  [4;35;1mSearch Load (0.8ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'iphone%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=iphone]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 00:07:45) [GET]
+  Parameters: {"id"=>"foo", "s"=>"wit"}
+  [4;36;1mSearch Load (0.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'wit%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 6ms (View: 1, DB: 0) | 200 OK [http://localhost/search/index/foo.json?s=wit]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSearches (20091207062213)
+Migrating to AddCandidateLabelToSearch (20091215082552)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (16.4ms)[0m   [0mALTER TABLE "searches" ADD "candidate_label" varchar(255)[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20091215082552')[0m
+  [4;35;1mSQL (118.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (22.5ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.1ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mPRAGMA index_list("searches")[0m
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 00:27:11) [GET]
+  Parameters: {"id"=>"foo", "s"=>"android"}
+  [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'android%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=android]
+
+
+Processing ApplicationController#index to json (for 127.0.0.1 at 2009-12-15 00:31:14) [GET]
+  Parameters: {"id"=>"foo", "s"=>"android"}
+
+SyntaxError (/Users/dan/src/northsignal2/app/controllers/search_controller.rb:34: syntax error, unexpected kEND, expecting $end):
+  
+
+Rendered rescues/_trace (59.1ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 00:31:53) [GET]
+  Parameters: {"id"=>"foo", "s"=>"android"}
+
+NoMethodError (undefined method `downcase' for ["android"]:Array):
+  app/controllers/search_controller.rb:27:in `clean_up'
+  app/controllers/search_controller.rb:27:in `map'
+  app/controllers/search_controller.rb:27:in `clean_up'
+  app/controllers/search_controller.rb:11:in `index'
+
+Rendered rescues/_trace (42.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 00:33:06) [GET]
+  Parameters: {"id"=>"foo", "s"=>"android"}
+  [4;36;1mSearch Load (0.9ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'android %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 93ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=android]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 00:33:46) [GET]
+  Parameters: {"id"=>"foo", "s"=>"androids"}
+  [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'android %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=androids]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 00:33:58) [GET]
+  Parameters: {"id"=>"foo", "s"=>"AnDroids"}
+  [4;36;1mSearch Load (0.9ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'android %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 13ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=AnDroids]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 00:34:10) [GET]
+  Parameters: {"id"=>"foo", "s"=>"wItch"}
+  [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'witch %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=wItch]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 00:34:50) [GET]
+  Parameters: {"id"=>"foo", "s"=>"mother in law"}
+  [4;36;1mSearch Load (0.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'mother in law %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=mother%20in%20law]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 00:35:11) [GET]
+  Parameters: {"id"=>"foo", "s"=>"mother in law"}
+  [4;35;1mSearch Load (0.7ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'mother in law %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=mother%20in%20law]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 00:35:14) [GET]
+  Parameters: {"id"=>"foo", "s"=>"mother"}
+  [4;36;1mSearch Load (1.7ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'mother %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 15ms (View: 1, DB: 2) | 200 OK [http://localhost/search/index/foo.json?s=mother]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 00:37:11) [GET]
+  Parameters: {"id"=>"foo", "s"=>"mother"}
+cleaned up version of the search string ismother 
+  [4;35;1mSearch Load (0.8ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'mother %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=mother]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 00:37:19) [GET]
+  Parameters: {"id"=>"foo", "s"=>"mother in law"}
+cleaned up version of the search string ismother in law 
+  [4;36;1mSearch Load (0.6ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'mother in law %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=mother%20in%20law]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 00:39:19) [GET]
+  Parameters: {"id"=>"foo", "s"=>"mother in law"}
+cleaned up version of the search string ismother in law
+  [4;35;1mSearch Load (0.7ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'mother in law%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=mother%20in%20law]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 00:39:34) [GET]
+  Parameters: {"id"=>"foo", "s"=>"   mother in law"}
+cleaned up version of the search string ismother in law
+  [4;36;1mSearch Load (0.7ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'mother in law%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=%20%20%20mother%20in%20law]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 00:39:43) [GET]
+  Parameters: {"id"=>"foo", "s"=>"   mother in laws"}
+cleaned up version of the search string ismother in law
+  [4;35;1mSearch Load (0.8ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'mother in law%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 10ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=%20%20%20mother%20in%20laws]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 00:39:50) [GET]
+  Parameters: {"id"=>"foo", "s"=>"   mothers in laws"}
+cleaned up version of the search string ismother in law
+  [4;36;1mSearch Load (0.7ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'mother in law%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 12ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=%20%20%20mothers%20in%20laws]

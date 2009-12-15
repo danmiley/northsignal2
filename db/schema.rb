@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20091207062213) do
+ActiveRecord::Schema.define(:version => 20091215082552) do
 
   create_table "searches", :force => true do |t|
     t.string   "candidate"
@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(:version => 20091207062213) do
     t.integer  "priority"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "candidate_label"
   end
 
 end
