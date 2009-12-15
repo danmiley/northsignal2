@@ -1,4 +1,4 @@
-class Spellcheck < ActiveRecord::Base
+class Spellcheck < Object
   
   # this is an initial attempt to keep spell table persistent
   # however the gentable method is run every time the controller is called

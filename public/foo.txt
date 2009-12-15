@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<records>
+ <my lil record>
+  <candidate>android 3gs</candidate>
+ </my lil record>
+ <my lil record>
+  <candidate>iphone 3g</candidate>
+ </my lil record>
+ <my lil record>
+  <candidate>android nexus one</candidate>
+ </my lil record>
+ <my lil record>
+  <candidate>iphone 3gs</candidate>
+ </my lil record>
+</records>

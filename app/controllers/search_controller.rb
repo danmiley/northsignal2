@@ -9,7 +9,7 @@ class SearchController < ApplicationController
       @result_array = ["hi","there", "world","hi","there", "world","hi","there", "world","hi","there", "world","hi","there", "world"]
       # the mapping approach below came from http://snippets.dzone.com/posts/show/3901
       @result_array = Search.all(:order => 'priority ASC', :limit => 10, :conditions => ["candidate LIKE ?", @search_terms +"%"]).map(&:candidate) # only return candidate strings
-            @result_array = ["hi","there", "world","hi","there", "world","hi","there", "world","hi","there", "world","hi","there", "world"] 
+       #     @result_array = ["hi","there", "world","hi","there", "world","hi","there", "world","hi","there", "world","hi","there", "world"] 
       render
   end
   

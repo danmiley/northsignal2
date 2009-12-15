@@ -1,23 +1,21 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-one:
+# !happy yaml fixture file
+1:
+  candidate: android 3gs
+  app: ps
+  priority: 1
+ 
+2:
+  candidate: iphone 3g
+  app: ps
+  priority: 1
+ 
+3:
+  candidate: android nexus one
+  app: ps
+  priority: 1
+ 
+4:
   candidate: iphone 3gs
   app: ps
   priority: 1
-
-two:
-  candidate: android mark 2
-  app: ps
-  priority: 1
-  
-
-three:
-  candidate: android prio 2
-  app: ps
-  priority: 2
-
-
-four:
-  candidate: android prio 3
-  app: ps
-  priority: 3  
+ 
