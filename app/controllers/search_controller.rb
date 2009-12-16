@@ -21,14 +21,32 @@ class SearchController < ApplicationController
   def clean_up(str)
     # normalize case, chomp, and singularize
     result = ''
+      begin
+        
+        # for each word, downcase and make singular, to test against standard format in db
+        result = str.split.map{ |x| x.chomp.downcase.pluralize.singularize + " " }.to_s.strip unless str.blank?#intended to work for multi tokens
+            logger.info 'first cleaned up version of the search string is' + result 
 
-    if !str.blank?
-
-      result = str.split.map{ |x| x.chomp.downcase.pluralize.singularize + " " }.to_s.strip #intended to work for multi tokens
-    end
+        # experimental spelling correction of all the subterms except for the last one, this is only for matching
+        # purposes
+        # the idea is that any completed words that user types in (signified by a space preceding) can be silently corrected when looking for a match
+        # (if indeed there are any spelling errors)  if there is a term in progress at the end, we leave it alone, as there are too many partial
+        # words that might flip to a strange word if applied to a spelling correction
+        result_vector = result.split
+        logger.info result_vector.length.to_s
+        if result_vector.length > 1  # we only correct after one complete word, and do no attempt to correct the last ( possibly partial term)
+          logger.info 'spelled up version of the search string is' + result_vector[0..(result_vector.length-2)].to_s
+          result = Spellcheck.multicandidate(result_vector[0..(result_vector.length-2)].map{ |x| x + " "}.to_s) + " " + result_vector[( result_vector.length-1)]
+        end
+        
         logger.info 'cleaned up version of the search string is' + result 
-    
 
+        
+    
+        # something bad happened
+      end
+      
+  
     #  result = str
 
     result

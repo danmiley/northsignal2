@@ -1,4 +1,5 @@
 class Spellcheck < Object
+  #this is not using activerecord as a superclass because i dont want fixtures to get picked up, and there is no db assoc'ed here
   
   # this is an initial attempt to keep spell table persistent
   # however the gentable method is run every time the controller is called
@@ -16,12 +17,12 @@ class Spellcheck < Object
   # if we like the initial term we return it
   def self.candidate(term) 
     if @@NWORDS.nil?
-      logger.info 'FIRED UP THE SPELL TABLE '  
+  #    logger.info 'FIRED UP THE SPELL TABLE '  
         gentable() # ideally this would be a check of a memcache table init
     end
       
     newterm = correct(term)
-     logger.info 'correcting ' + term + 'with ' + newterm
+   #  logger.info 'correcting ' + term + 'with ' + newterm
     newterm
     
   end
@@ -29,12 +30,12 @@ class Spellcheck < Object
 # =>   takes a string of terms and applies the corrector to each of the tokens inside
   def self.multicandidate(terms) 
     if @@NWORDS.nil?
-      logger.info 'FIRED UP THE SPELL TABLE '  
+     # logger.info 'FIRED UP THE SPELL TABLE '  
         gentable() # ideally this would be a check of a memcache table init
     end
       
-    newterms = terms.split.map{ |x| candidate(x) + " " }.to_s #intended to work for multi tokens
-     logger.info 'correcting ' + terms + 'with ' + newterms
+    newterms = terms.split.map{ |x| candidate(x) + " " }.to_s.strip #intended to work for multi tokens
+   #  logger.info 'correcting ' + terms + 'with ' + newterms
     newterms
     
   end

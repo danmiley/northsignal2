@@ -41,6 +41,8 @@ Character set encoding: ASCII
 *** START OF THE PROJECT GUTENBERG EBOOK, THE ADVENTURES OF SHERLOCK HOLMES ***
 
 
+witches
+witch
 
 
 (Additional editing by Jose Menendez)

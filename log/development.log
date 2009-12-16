@@ -1597,3 +1597,575 @@ cleaned up version of the search string ismother in law
   [4;36;1mSearch Load (0.7ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'mother in law%') ORDER BY priority ASC LIMIT 10[0m
 Rendering search/index
 Completed in 12ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=%20%20%20mothers%20in%20laws]
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-15 20:21:28) [GET]
+  Parameters: {"id"=>"foo", "s"=>"londin"}
+
+NameError (undefined local variable or method `logger' for Spellcheck:Class):
+  app/models/spellcheck.rb:32:in `multicandidate'
+  app/controllers/spell_controller.rb:10:in `index'
+
+Rendered rescues/_trace (42.9ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-15 20:23:06) [GET]
+  Parameters: {"id"=>"foo", "s"=>"londin"}
+
+NameError (undefined local variable or method `logger' for Spellcheck:Class):
+  app/models/spellcheck.rb:24:in `candidate'
+  app/models/spellcheck.rb:36:in `multicandidate'
+  app/models/spellcheck.rb:36:in `map'
+  app/models/spellcheck.rb:36:in `multicandidate'
+  app/controllers/spell_controller.rb:10:in `index'
+
+Rendered rescues/_trace (45.6ms)
+Rendered rescues/_request_and_response (0.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-15 20:23:31) [GET]
+  Parameters: {"id"=>"foo", "s"=>"londin"}
+Rendering spell/index
+Completed in 1106ms (View: 292, DB: 0) | 200 OK [http://localhost/spell/index/foo.json?s=londin]
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-15 20:33:50) [GET]
+  Parameters: {"id"=>"foo", "s"=>"londin"}
+Rendering spell/index
+Completed in 468ms (View: 13, DB: 0) | 200 OK [http://localhost/spell/index/foo.json?s=londin]
+
+
+Processing ApplicationController#index to json (for 127.0.0.1 at 2009-12-15 20:33:57) [GET]
+  Parameters: {"id"=>"foo", "s"=>"wit"}
+
+SyntaxError (/Users/dan/src/northsignal2/app/controllers/search_controller.rb:31: syntax error, unexpected ')', expecting kEND
+          result = Spellcheck.multicandidate(result)) 
+                                                     ^
+/Users/dan/src/northsignal2/app/controllers/search_controller.rb:37: syntax error, unexpected kRESCUE, expecting kEND
+      rescue Exception => e
+            ^
+/Users/dan/src/northsignal2/app/controllers/search_controller.rb:46: syntax error, unexpected $end, expecting kEND):
+  
+
+Rendered rescues/_trace (43.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:34:07) [GET]
+  Parameters: {"id"=>"foo", "s"=>"wit"}
+cleaned up version of the search string iswit
+  [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'wit%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 67ms (View: 17, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=wit]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:34:16) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witzch"}
+cleaned up version of the search string iswitzch
+  [4;36;1mSearch Load (0.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'witzch%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witzch]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:34:22) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witzches of"}
+cleaned up version of the search string iswith of 
+  [4;35;1mSearch Load (0.5ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'with of %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 2043ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witzches%20of]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:34:34) [GET]
+  Parameters: {"id"=>"foo", "s"=>"wiches of"}
+cleaned up version of the search string iswith of 
+  [4;36;1mSearch Load (0.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'with of %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 441ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=wiches%20of]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:34:47) [GET]
+  Parameters: {"id"=>"foo", "s"=>"londin of"}
+cleaned up version of the search string islondon of 
+  [4;35;1mSearch Load (0.6ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'london of %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 387ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=londin%20of]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:35:18) [GET]
+  Parameters: {"id"=>"foo", "s"=>"londin of"}
+cleaned up version of the search string islondon of 
+  [4;36;1mSearch Load (0.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'london of %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 416ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=londin%20of]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:35:23) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches of"}
+cleaned up version of the search string iswith of 
+  [4;35;1mSearch Load (0.5ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'with of %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 392ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20of]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:36:43) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witzches of"}
+cleaned up version of the search string iswith of 
+  [4;36;1mSearch Load (0.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'with of %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 2132ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witzches%20of]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:37:01) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches of"}
+cleaned up version of the search string iswith of 
+  [4;35;1mSearch Load (0.5ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'with of %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 313ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20of]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:37:08) [GET]
+  Parameters: {"id"=>"foo", "s"=>"iphone"}
+cleaned up version of the search string isiphone
+  [4;36;1mSearch Load (0.9ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'iphone%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=iphone]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:37:15) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches"}
+cleaned up version of the search string iswitch
+  [4;35;1mSearch Load (0.8ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'witch%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:37:25) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches of"}
+cleaned up version of the search string iswith of 
+  [4;36;1mSearch Load (0.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'with of %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 313ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20of]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:38:09) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches of"}
+first cleaned up version of the search string iswitch of
+cleaned up version of the search string iswith of 
+  [4;35;1mSearch Load (0.5ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'with of %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 311ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20of]
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-15 20:39:25) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witch"}
+Rendering spell/index
+Completed in 404ms (View: 1, DB: 0) | 200 OK [http://localhost/spell/index/foo.json?s=witch]
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-15 20:39:44) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witch"}
+Rendering spell/index
+Completed in 389ms (View: 1, DB: 0) | 200 OK [http://localhost/spell/index/foo.json?s=witch]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:39:54) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches of"}
+first cleaned up version of the search string iswitch of
+cleaned up version of the search string iswitch of 
+  [4;36;1mSearch Load (0.7ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'witch of %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 396ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20of]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:39:59) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witchzes of"}
+first cleaned up version of the search string iswitchze of
+cleaned up version of the search string iswitch of 
+  [4;35;1mSearch Load (0.7ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'witch of %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 2563ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witchzes%20of]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:41:02) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witchs of"}
+first cleaned up version of the search string iswitch of
+cleaned up version of the search string iswitch of 
+  [4;36;1mSearch Load (0.8ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'witch of %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 449ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witchs%20of]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:42:51) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witchs of east"}
+first cleaned up version of the search string iswitch of east
+cleaned up version of the search string iswitch of east 
+  [4;35;1mSearch Load (0.5ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'witch of east %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 387ms (View: 1, DB: 0) | 200 OK [http://localhost/search/index/foo.json?s=witchs%20of%20east]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:43:59) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witchs of east"}
+first cleaned up version of the search string iswitch of east
+cleaned up version of the search string iswitch of east
+  [4;36;1mSearch Load (0.7ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'witch of east%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 386ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witchs%20of%20east]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:44:09) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witchs of eastw"}
+first cleaned up version of the search string iswitch of eastw
+cleaned up version of the search string iswitch of east
+  [4;35;1mSearch Load (0.7ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'witch of east%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 312ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witchs%20of%20eastw]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:46:57) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witchs of eastw"}
+first cleaned up version of the search string iswitch of eastw
+  [4;36;1mSearch Load (0.7ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'witch of eastw%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 424ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witchs%20of%20eastw]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:48:00) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witchs of eastwi"}
+first cleaned up version of the search string iswitch of eastwi
+  [4;35;1mSearch Load (0.7ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'witch of eastwi%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 399ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witchs%20of%20eastwi]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:48:15) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches of"}
+first cleaned up version of the search string iswitch of
+  [4;36;1mSearch Load (0.8ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'witch of%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 349ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20of]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:48:20) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches off"}
+first cleaned up version of the search string iswitch off
+  [4;35;1mSearch Load (0.5ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'witch off%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 411ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20off]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:48:29) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches off east"}
+first cleaned up version of the search string iswitch off east
+  [4;36;1mSearch Load (0.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'witch off east%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 387ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20off%20east]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:48:44) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches ofd east"}
+first cleaned up version of the search string iswitch ofd east
+  [4;35;1mSearch Load (0.5ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'witch ofd east%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 316ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20ofd%20east]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:49:09) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches odf east"}
+first cleaned up version of the search string iswitch odf east
+  [4;36;1mSearch Load (0.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'witch odf east%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 305ms (View: 1, DB: 0) | 200 OK [http://localhost/search/index/foo.json?s=witches%20odf%20east]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:50:11) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches odf east"}
+first cleaned up version of the search string iswitch odf east
+  [4;35;1mSearch Load (0.5ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'witch odf east%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20odf%20east]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:50:14) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches odf east"}
+first cleaned up version of the search string iswitch odf east
+  [4;36;1mSearch Load (0.7ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'witch odf east%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20odf%20east]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:50:40) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches odf east"}
+first cleaned up version of the search string iswitch odf east
+  [4;35;1mSearch Load (0.5ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'witch odf east%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20odf%20east]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:51:14) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches odf east"}
+first cleaned up version of the search string iswitch odf east
+  [4;36;1mSearch Load (0.6ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'witch odf east%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 120ms (View: 113, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20odf%20east]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:53:44) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches odf east"}
+first cleaned up version of the search string iswitch odf east
+witchodfeast
+  [4;35;1mSearch Load (0.5ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'witch odf east%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 6ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20odf%20east]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:54:30) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches odf east"}
+first cleaned up version of the search string iswitch odf east
+3
+  [4;36;1mSearch Load (0.6ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'witch odf east%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20odf%20east]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:55:38) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches odf east"}
+first cleaned up version of the search string iswitch odf east
+3
+  [4;35;1mSearch Load (1.4ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'witch odf east%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 8ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20odf%20east]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:58:31) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches odf east"}
+first cleaned up version of the search string iswitch odf east
+3
+  [4;36;1mSearch Load (0.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'witch odf east%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20odf%20east]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 20:58:37) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches odf eastw"}
+first cleaned up version of the search string iswitch odf eastw
+3
+  [4;35;1mSearch Load (0.5ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'witch odf eastw%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 7ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20odf%20eastw]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 21:00:18) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches odf eastw"}
+first cleaned up version of the search string iswitch odf eastw
+3
+
+TypeError (can't convert Array into String):
+  app/controllers/search_controller.rb:34:in `+'
+  app/controllers/search_controller.rb:34:in `clean_up'
+  app/controllers/search_controller.rb:11:in `index'
+
+Rendered rescues/_trace (125.2ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 21:03:13) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches odf eastw"}
+first cleaned up version of the search string iswitch odf eastw
+3
+
+TypeError (can't convert Array into String):
+  app/controllers/search_controller.rb:34:in `+'
+  app/controllers/search_controller.rb:34:in `clean_up'
+  app/controllers/search_controller.rb:11:in `index'
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 21:03:16) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches odf eastw"}
+first cleaned up version of the search string iswitch odf eastw
+3
+
+TypeError (can't convert Array into String):
+  app/controllers/search_controller.rb:34:in `+'
+  app/controllers/search_controller.rb:34:in `clean_up'
+  app/controllers/search_controller.rb:11:in `index'
+
+Rendered rescues/_trace (43.9ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 21:04:11) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches odf eastw"}
+first cleaned up version of the search string iswitch odf eastw
+3
+
+TypeError (can't convert Array into String):
+  app/controllers/search_controller.rb:34:in `+'
+  app/controllers/search_controller.rb:34:in `clean_up'
+  app/controllers/search_controller.rb:11:in `index'
+
+Rendered rescues/_trace (132.3ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 21:04:36) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches odf eastw"}
+first cleaned up version of the search string iswitch odf eastw
+3
+
+TypeError (can't convert Array into String):
+  app/controllers/search_controller.rb:34:in `+'
+  app/controllers/search_controller.rb:34:in `clean_up'
+  app/controllers/search_controller.rb:11:in `index'
+
+Rendered rescues/_trace (44.2ms)
+Rendered rescues/_request_and_response (1.5ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 21:04:57) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches odf eastw"}
+first cleaned up version of the search string iswitch odf eastw
+3
+spelled up version of the search string iswitchodfeastw
+
+TypeError (can't convert nil into String):
+  app/controllers/search_controller.rb:35:in `+'
+  app/controllers/search_controller.rb:35:in `clean_up'
+  app/controllers/search_controller.rb:11:in `index'
+
+Rendered rescues/_trace (44.1ms)
+Rendered rescues/_request_and_response (0.4ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 21:05:31) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches odf eastw"}
+first cleaned up version of the search string iswitch odf eastw
+3
+spelled up version of the search string iswitchodfeastw
+cleaned up version of the search string iswitchodfeastw 
+  [4;36;1mSearch Load (0.6ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'witchodfeastw %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 7670ms (View: 11, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20odf%20eastw]
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-15 21:06:17) [GET]
+  Parameters: {"id"=>"foo", "s"=>"odf"}
+Rendering spell/index
+Completed in 470ms (View: 17, DB: 0) | 200 OK [http://localhost/spell/index/foo.json?s=odf]
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-15 21:07:49) [GET]
+  Parameters: {"id"=>"foo", "s"=>"odf"}
+Rendering spell/index
+Completed in 378ms (View: 1, DB: 0) | 200 OK [http://localhost/spell/index/foo.json?s=odf]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 21:07:55) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches odf eastw"}
+first cleaned up version of the search string iswitch odf eastw
+3
+spelled up version of the search string iswitchodf
+cleaned up version of the search string iswitchodf 
+  [4;35;1mSearch Load (0.5ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'witchodf %') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 3238ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20odf%20eastw]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 21:09:04) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches odf eastw"}
+first cleaned up version of the search string iswitch odf eastw
+3
+spelled up version of the search string iswitchodf
+cleaned up version of the search string iswitch of eastw
+  [4;36;1mSearch Load (0.8ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'witch of eastw%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 430ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20odf%20eastw]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 21:09:30) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches ozf eastz"}
+first cleaned up version of the search string iswitch ozf eastz
+3
+spelled up version of the search string iswitchozf
+cleaned up version of the search string iswitch of eastz
+  [4;35;1mSearch Load (0.5ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'witch of eastz%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 398ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20ozf%20eastz]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 21:09:34) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witches ozf east"}
+first cleaned up version of the search string iswitch ozf east
+3
+spelled up version of the search string iswitchozf
+cleaned up version of the search string iswitch of east
+  [4;36;1mSearch Load (0.7ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'witch of east%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 406ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witches%20ozf%20east]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 21:09:42) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witchs ozf east"}
+first cleaned up version of the search string iswitch ozf east
+3
+spelled up version of the search string iswitchozf
+cleaned up version of the search string iswitch of east
+  [4;35;1mSearch Load (0.7ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'witch of east%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 325ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witchs%20ozf%20east]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 21:09:53) [GET]
+  Parameters: {"id"=>"foo", "s"=>"ifone 3g"}
+first cleaned up version of the search string isifone 3g
+2
+spelled up version of the search string isifone
+cleaned up version of the search string isone 3g
+  [4;36;1mSearch Load (0.6ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'one 3g%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 1690ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=ifone%203g]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 21:10:06) [GET]
+  Parameters: {"id"=>"foo", "s"=>"londin"}
+first cleaned up version of the search string islondin
+1
+cleaned up version of the search string islondin
+  [4;35;1mSearch Load (0.5ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'londin%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=londin]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 21:13:30) [GET]
+  Parameters: {"id"=>"foo", "s"=>"   mothers in laws"}
+first cleaned up version of the search string ismother in law
+3
+spelled up version of the search string ismotherin
+cleaned up version of the search string ismother in law
+  [4;36;1mSearch Load (0.7ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'mother in law%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 402ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=%20%20%20mothers%20in%20laws]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-15 21:13:54) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witchs ozf east"}
+first cleaned up version of the search string iswitch ozf east
+3
+spelled up version of the search string iswitchozf
+cleaned up version of the search string iswitch of east
+  [4;35;1mSearch Load (0.7ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'witch of east%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 315ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witchs%20ozf%20east]
