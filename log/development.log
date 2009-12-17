@@ -2169,3 +2169,23 @@ cleaned up version of the search string iswitch of east
   [4;35;1mSearch Load (0.7ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'witch of east%') ORDER BY priority ASC LIMIT 10[0m
 Rendering search/index
 Completed in 315ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witchs%20ozf%20east]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-16 21:32:57) [GET]
+  Parameters: {"id"=>"foo", "s"=>"iphone"}
+first cleaned up version of the search string isiphone
+1
+cleaned up version of the search string isiphone
+  [4;36;1mSearch Load (13.1ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'iphone%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 3608ms (View: 2, DB: 13) | 200 OK [http://localhost/search/index/foo.json?s=iphone]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-16 21:33:06) [GET]
+  Parameters: {"id"=>"foo", "s"=>"and"}
+first cleaned up version of the search string isand
+1
+cleaned up version of the search string isand
+  [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'and%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 17ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=and]

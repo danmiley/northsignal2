@@ -1,6 +1,9 @@
 class ConvertController < ApplicationController
   require 'csv'
 
+  # so here's a question, if there is a token with punctuation in it..
+  # nuke the punctuation as far as searching goes, but keep it in the label field?
+  # e.g. mother in law's is a possessive, google will match this with term mother in laws
   def index
     
       @input_file = params[:input].chomp
@@ -63,7 +66,9 @@ class ConvertController < ApplicationController
     result = ''
     
       result = str.split.map{ |x| x.chomp.downcase.pluralize.singularize + " " }.to_s.strip #intended to work for multi tokens
-    
+      # if we  want to remove punctuation from each word as well just for cleanup, then do this:
+        # result = str.split.map{ |x| x.chomp.downcase.pluralize.singularize.gsub(/[(,?!\'":.)]/, '') + " " }.to_s.strip #intended to work for multi tokens
+       
     #  result = str
     
     result

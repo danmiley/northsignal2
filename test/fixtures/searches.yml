@@ -13,7 +13,7 @@
  
 3:
   candidate: android nexu one 
-  candidate_label: android Nexus one
+  candidate_label: android Nexus <b> one</b>
   app: ps
   priority: 1
  
