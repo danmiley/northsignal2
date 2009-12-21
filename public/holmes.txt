@@ -43,6 +43,11 @@ Character set encoding: ASCII
 
 witches
 witch
+wouldn't
+can't
+can't
+can't
+can't
 
 
 (Additional editing by Jose Menendez)

@@ -2189,3 +2189,185 @@ cleaned up version of the search string isand
   [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'and%') ORDER BY priority ASC LIMIT 10[0m
 Rendering search/index
 Completed in 17ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=and]
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-17 21:30:38) [GET]
+  Parameters: {"id"=>"foo", "s"=>"odf"}
+Rendering spell/index
+Completed in 739ms (View: 45, DB: 0) | 200 OK [http://localhost/spell/index/foo.json?s=odf]
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-17 21:55:10) [GET]
+  Parameters: {"id"=>"foo", "s"=>"can't"}
+Rendering spell/index
+Completed in 1873ms (View: 1, DB: 0) | 200 OK [http://localhost/spell/index/foo.json?s=can%27t]
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-17 21:57:35) [GET]
+  Parameters: {"id"=>"foo", "s"=>"can't"}
+Rendering spell/index
+Completed in 1686ms (View: 1, DB: 0) | 200 OK [http://localhost/spell/index/foo.json?s=can%27t]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-17 22:04:42) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witchs ozf east"}
+first cleaned up version of the search string iswitch ozf east
+3
+spelled up version of the search string iswitchozf
+cleaned up version of the search string iswitch of east
+  [4;36;1mSearch Load (16.8ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'witch of east%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 433ms (View: 1, DB: 17) | 200 OK [http://localhost/search/index/foo.json?s=witchs%20ozf%20east]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-17 22:04:51) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witchs ozf can't"}
+first cleaned up version of the search string iswitch ozf can't
+3
+spelled up version of the search string iswitchozf
+cleaned up version of the search string iswitch of can't
+  [4;35;1mSearch Load (0.5ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'witch of can''t%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 366ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witchs%20ozf%20can%27t]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-17 22:04:57) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witchs ozf can"}
+first cleaned up version of the search string iswitch ozf can
+3
+spelled up version of the search string iswitchozf
+cleaned up version of the search string iswitch of can
+  [4;36;1mSearch Load (0.6ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'witch of can%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 422ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witchs%20ozf%20can]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-17 22:05:02) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witchs ozf canadda"}
+first cleaned up version of the search string iswitch ozf canadda
+3
+spelled up version of the search string iswitchozf
+cleaned up version of the search string iswitch of canadda
+  [4;35;1mSearch Load (0.5ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'witch of canadda%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 396ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witchs%20ozf%20canadda]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-17 22:05:08) [GET]
+  Parameters: {"id"=>"foo", "s"=>"witchs ozf londin"}
+first cleaned up version of the search string iswitch ozf londin
+3
+spelled up version of the search string iswitchozf
+cleaned up version of the search string iswitch of londin
+  [4;36;1mSearch Load (0.5ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'witch of londin%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 398ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=witchs%20ozf%20londin]
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-17 22:05:40) [GET]
+  Parameters: {"id"=>"foo", "s"=>"tirred of playinz this gamz"}
+Rendering spell/index
+Completed in 330ms (View: 1, DB: 0) | 200 OK [http://localhost/spell/index/foo.json?s=tirred%20of%20playinz%20this%20gamz]
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-17 22:05:49) [GET]
+  Parameters: {"id"=>"foo", "s"=>"tirred of playinz this can't"}
+Rendering spell/index
+Completed in 1727ms (View: 1, DB: 0) | 200 OK [http://localhost/spell/index/foo.json?s=tirred%20of%20playinz%20this%20can%27t]
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-17 22:06:10) [GET]
+  Parameters: {"id"=>"foo", "s"=>"tirred of playinz this woudn't"}
+Rendering spell/index
+Completed in 2835ms (View: 1, DB: 0) | 200 OK [http://localhost/spell/index/foo.json?s=tirred%20of%20playinz%20this%20woudn%27t]
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-17 22:06:23) [GET]
+  Parameters: {"id"=>"foo", "s"=>"tirred of playinz this woujdn't"}
+Rendering spell/index
+Completed in 3462ms (View: 1, DB: 0) | 200 OK [http://localhost/spell/index/foo.json?s=tirred%20of%20playinz%20this%20woujdn%27t]
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-17 22:06:38) [GET]
+  Parameters: {"id"=>"foo", "s"=>"tirred of playinz this woudn'tt"}
+Rendering spell/index
+Completed in 3452ms (View: 1, DB: 0) | 200 OK [http://localhost/spell/index/foo.json?s=tirred%20of%20playinz%20this%20woudn%27tt]
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-17 22:06:57) [GET]
+  Parameters: {"id"=>"foo", "s"=>"tirred of playinz this wouldnn't"}
+Rendering spell/index
+Completed in 4164ms (View: 1, DB: 0) | 200 OK [http://localhost/spell/index/foo.json?s=tirred%20of%20playinz%20this%20wouldnn%27t]
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-17 22:07:36) [GET]
+  Parameters: {"id"=>"foo", "s"=>"tirred of playinz this can't"}
+Rendering spell/index
+Completed in 1708ms (View: 1, DB: 0) | 200 OK [http://localhost/spell/index/foo.json?s=tirred%20of%20playinz%20this%20can%27t]
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-17 22:08:15) [GET]
+  Parameters: {"id"=>"foo", "s"=>"tirred of playinz this can't"}
+Rendering spell/index
+Completed in 1511ms (View: 1, DB: 0) | 200 OK [http://localhost/spell/index/foo.json?s=tirred%20of%20playinz%20this%20can%27t]
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-17 22:18:37) [GET]
+  Parameters: {"id"=>"foo", "s"=>"can't"}
+Rendering spell/index
+Completed in 437ms (View: 1, DB: 0) | 200 OK [http://localhost/spell/index/foo.json?s=can%27t]
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-17 22:18:50) [GET]
+  Parameters: {"id"=>"foo", "s"=>"i can't standd lozing you"}
+Rendering spell/index
+Completed in 416ms (View: 1, DB: 0) | 200 OK [http://localhost/spell/index/foo.json?s=i%20can%27t%20standd%20lozing%20you]
+
+
+Processing ConvertController#index to json (for 127.0.0.1 at 2009-12-17 22:29:32) [GET]
+  Parameters: {"id"=>"foo", "output"=>"searches", "input"=>"dummysearchdata.txt"}
+Rendering convert/index
+Completed in 158ms (View: 123, DB: 0) | 200 OK [http://localhost/convert/index/foo.json?input=dummysearchdata.txt&output=searches]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-17 22:31:08) [GET]
+  Parameters: {"id"=>"foo", "s"=>"can"}
+first cleaned up version of the search string iscan
+1
+cleaned up version of the search string iscan
+  [4;35;1mSearch Load (0.9ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'can%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=can]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-17 22:31:18) [GET]
+  Parameters: {"id"=>"foo", "s"=>"can't"}
+first cleaned up version of the search string iscan't
+1
+cleaned up version of the search string iscan't
+  [4;36;1mSearch Load (0.7ms)[0m   [0;1mSELECT * FROM "searches" WHERE (candidate LIKE 'can''t%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 9ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=can%27t]
+
+
+Processing SearchController#index to json (for 127.0.0.1 at 2009-12-17 22:31:26) [GET]
+  Parameters: {"id"=>"foo", "s"=>"can't win"}
+first cleaned up version of the search string iscan't win
+2
+spelled up version of the search string iscan't
+cleaned up version of the search string iscan't win
+  [4;35;1mSearch Load (0.7ms)[0m   [0mSELECT * FROM "searches" WHERE (candidate LIKE 'can''t win%') ORDER BY priority ASC LIMIT 10[0m
+Rendering search/index
+Completed in 419ms (View: 1, DB: 1) | 200 OK [http://localhost/search/index/foo.json?s=can%27t%20win]
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-21 13:29:33) [GET]
+  Parameters: {"id"=>"foo", "s"=>"can't"}
+Rendering spell/index
+Completed in 1641ms (View: 162, DB: 0) | 200 OK [http://localhost/spell/index/foo.json?s=can%27t]
+
+
+Processing SpellController#index to json (for 127.0.0.1 at 2009-12-21 13:30:34) [GET]
+  Parameters: {"id"=>"foo", "s"=>"the quickk browwn fox junped ovr the laxy dig"}
+Rendering spell/index
+Completed in 939ms (View: 34, DB: 0) | 200 OK [http://localhost/spell/index/foo.json?s=the%20quickk%20browwn%20fox%20junped%20ovr%20the%20laxy%20dig]

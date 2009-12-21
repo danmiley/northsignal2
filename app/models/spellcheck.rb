@@ -20,8 +20,15 @@ class Spellcheck < Object
   #    logger.info 'FIRED UP THE SPELL TABLE '  
         gentable() # ideally this would be a check of a memcache table init
     end
-      
-    newterm = correct(term)
+    
+    newterm = term  # default
+    
+    # any contractions? take a pass on trying to correct for now 12/19
+    # because this vanilla checker is lousy at handling terms with ' contractions (wouldn't / couldn't etc)
+    if term.index("'").nil?
+      newterm = correct(term)
+    end
+    
    #  logger.info 'correcting ' + term + 'with ' + newterm
     newterm
     
